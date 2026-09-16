@@ -23,3 +23,25 @@
 /* Approved monoline identity, framed from the original artwork. */
 .line-logo{display:block;position:relative;width:112px;aspect-ratio:880/350;overflow:hidden;mix-blend-mode:lighten}.line-logo img{position:absolute;width:174.545%;max-width:none;height:auto;left:-37.5%;top:-98.57%;display:block}.brand-mark{display:block;letter-spacing:normal;font-size:inherit}.footer-logo .line-logo{width:105px}.monogram.line-monogram{left:10%;right:10%;top:34%;font-size:inherit;line-height:normal;letter-spacing:normal;text-shadow:none;transform:rotate(-9deg);mix-blend-mode:lighten}.line-monogram .line-logo{width:100%}.line-about{font-size:inherit;letter-spacing:normal;width:100%;mix-blend-mode:lighten}.line-about .line-logo{width:100%;max-width:170px}.footer-logo>span.line-logo{font-size:inherit}.super-tool-bottom>span:first-child{overflow-wrap:anywhere;min-width:0}.super-tool-bottom>span:last-child{flex-shrink:0}@media(max-width:760px){.brand-mark .line-logo{width:95px}.footer-logo .line-logo{width:90px}.monogram.line-monogram{top:33%}}
 .line-monogram>.line-logo,.line-about>.line-logo{position:relative;top:auto;right:auto;font-size:inherit;letter-spacing:normal;text-shadow:none}
+
+/* Unified black canvas; color appears on card interaction. */
+:root,.dark{--background:#000;--card:#000;--popover:#0b0b0b;--line:#262626}
+html,body,.site{background:#000}
+.site-header,.ticker,.lab-section{background:transparent}
+.hero-art,.resource-card,.super-tool,.about{background:transparent;box-shadow:none;border-color:#2c2c2c;transition:background .3s var(--ease),border-color .3s,transform .3s var(--ease)}
+.card-art{background:transparent;color:#cbd6c0;border-bottom:1px solid #252525;transition:background .3s,color .3s}
+.super-tool-icon{background:transparent;color:var(--lime);border:1px solid #36412d;transition:background .3s,color .3s}
+.line-logo img{filter:contrast(1.2)}
+.resource-card:focus-visible,.super-tool:focus-visible,.hero-art:focus-within,.about:focus-within{background:#172011;border-color:#6d8752}
+.resource-card:focus-visible .card-art,.super-tool:focus-visible .super-tool-icon{background:var(--lime);color:#26351b}
+@media(hover:hover){
+.hero-art:hover,.about:hover{background:#172011;border-color:#526b3c}
+.resource-card:hover,.super-tool:hover{background:#172011;border-color:#809b5d}
+.resource-card:hover .card-art.lime{background:#d0e9a4;color:#2e4021}
+.resource-card:hover .card-art.purple{background:#c5b7dd;color:#382d45}
+.resource-card:hover .card-art.peach{background:#e5bda3;color:#4b362b}
+.resource-card:hover .card-art.blue{background:#aebfca;color:#273a46}
+.resource-card:hover .card-art.cream{background:#dedac2;color:#403e2a}
+.super-tool:hover .super-tool-icon{background:var(--lime);color:#26351b}
+}
+@media(hover:none){.resource-card:hover,.super-tool:hover{background:transparent}}
