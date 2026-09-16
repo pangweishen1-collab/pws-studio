@@ -1,0 +1,26 @@
+export const resources=[
+ {id:'research',type:'Skill',tag:'研究分析',title:'把一个问题，研究透。',description:'从问题拆解到证据核查，让研究有据可循。',art:'research /',color:'lime',sub:'QUESTION → EVIDENCE → INSIGHT',body:'适合需要判断产品、行业或新机会的研究。先明确研究对象、时间范围和交付标准，再查找一手来源，交叉验证关键结论。',steps:['写下待验证的问题与判断标准','收集原始来源，标记发布日期','把事实、推断与未知项分开记录'],template:'研究问题：\n研究范围与时间：\n关键证据及来源：\n我的判断：\n仍需核实：\n下一步行动：'},
+ {id:'visual',type:'Skill',tag:'视觉创作',title:'让视觉想法，更准确地落地。',description:'把风格、构图与约束，整理成清楚的创作指令。',art:'/create',color:'purple',sub:'IDEA INTO SOMETHING REAL',body:'适合制作视觉素材前整理需求。先把尺寸、用途和不可改变的要素写清楚，再描述风格与构图，每轮只修改最影响结果的部分。',steps:['确定使用位置、比例与交付格式','分开写必须保留和可以探索的元素','用明确的修改项迭代并验收'],template:'用途与尺寸：\n主体：\n构图：\n颜色与材质：\n必须保留：\n需要避免：\n验收标准：'},
+ {id:'brief',type:'工具',tag:'需求整理',title:'把“我想要”，变成能执行。',description:'一个轻量需求清单，把目标与验收放在一起。',art:'idea → brief',color:'peach',sub:'MAKE THE NEXT STEP CLEAR',body:'开始一个项目之前，用这张清单对齐目标。重点是写出用户完成什么动作、得到什么结果，以及什么情况下可以视为完成。',steps:['说明给谁用、解决哪一个问题','列出第一版必须完成的三个动作','为每个动作写下可观察的验收结果'],template:'给谁使用：\n要解决的问题：\n第一版包含：\n暂时不做：\n验收方式：'},
+ {id:'review',type:'笔记',tag:'项目复盘',title:'项目结束后，值得留下什么？',description:'把做过的事情，变成下一次可以复用的方法。',art:'RE:VIEW',color:'blue',sub:'MAKE EXPERIENCE COUNT',body:'复盘不仅记录结果，也保留做决定时掌握的信息。把当时的假设、最终结果和中途调整放在一起，才能发现真正可迁移的方法。',steps:['记录目标与实际结果之间的差异','找出一个有效判断与一个错误假设','把可复用步骤整理成模板'],template:'原始目标：\n实际结果：\n关键决策：\n有效的方法：\n需要改变的假设：\n可复用资产：'},
+ {id:'workflow',type:'Skill',tag:'工作流程',title:'让重复工作，有自己的流程。',description:'从一次完成，到每次都能稳定交付。',art:'01 → 02 → 03',color:'lime',sub:'LESS REPEAT. MORE CREATE.',body:'将重复工作拆成输入、处理、检查、输出四部分。先让流程可以手动复现，再考虑自动化，保留关键节点的人工判断。',steps:['找出每次都重复的步骤','为输入和输出设定固定格式','标注必须人工核查的节点'],template:'流程名称：\n触发条件：\n必要输入：\n执行步骤：\n检查节点：\n最终产出：'},
+ {id:'archive',type:'工具',tag:'资产整理',title:'收藏之后，还能找得到。',description:'给零散素材一个清晰的位置和再次使用的理由。',art:'[ keep it ]',color:'cream',sub:'COLLECT LESS. CONNECT MORE.',body:'按使用场景整理，而不是按文件类型堆放。每条资源保留一句推荐理由、适用条件和原始出处，定期移除已经失效的内容。',steps:['按下次会怎样使用来分类','补上来源、使用理由和更新时间','把资源关联到具体项目'],template:'资源名称：\n原始链接：\n使用场景：\n推荐理由：\n限制条件：\n最近验证：'}
+];
+export const superTools=[
+ {name:'Vibe Coding 雷达',mark:'Ra',category:'项目灵感',description:'发现有趣实用的编程项目，查看项目来源与开工思路。',url:'https://radar.lyihub.com/',domain:'radar.lyihub.com',color:'lime'},
+ {name:'腾讯 SkillHub',mark:'Sk',category:'Skills 平台',description:'腾讯 SkillHub 的 SkillPay 页面入口。',url:'https://skillhub.cloud.tencent.com/skillpay',domain:'skillhub.cloud.tencent.com',color:'blue'},
+ {name:'VibeHub',mark:'Vi',category:'编程术语',description:'查找界面、设计与 AI 编程术语，把想法表达得更准确。',url:'https://vibe-hub.org/',domain:'vibe-hub.org',color:'purple'},
+ {name:'Figma',mark:'Fi',category:'界面设计',description:'设计界面、搭建原型，把想法变成可以讨论的方案。',url:'https://www.figma.com/',domain:'figma.com',color:'purple'},
+ {name:'Canva',mark:'Ca',category:'内容创作',description:'制作海报、演示文稿和社交媒体图片。',url:'https://www.canva.com/',domain:'canva.com',color:'blue'},
+ {name:'Notion',mark:'N',category:'知识整理',description:'把笔记、文档和项目资料整理在一个工作空间。',url:'https://www.notion.com/',domain:'notion.com',color:'cream'},
+ {name:'Squoosh',mark:'Sq',category:'图片处理',description:'调整图片格式与质量，对比压缩前后的效果。',url:'https://squoosh.app/',domain:'squoosh.app',color:'peach'},
+ {name:'TinyPNG',mark:'Tp',category:'图片压缩',description:'压缩 PNG、JPEG 和 WebP 图片，减小素材体积。',url:'https://tinypng.com/',domain:'tinypng.com',color:'lime'},
+ {name:'Excalidraw',mark:'Ex',category:'白板绘图',description:'用手绘风格的图形，快速画出思路与流程。',url:'https://excalidraw.com/',domain:'excalidraw.com',color:'purple'}
+];
+
+export type CatalogItem={id:string;title:string;description:string;kind:'Skill'|'工具'|'笔记';scene:string;source:'入门模板'|'官方工具';color:string;mark:string;url?:string;domain?:string;resourceId?:string};
+const scenes:Record<string,string>={research:'研究分析',visual:'设计创作',brief:'效率办公',review:'知识管理',workflow:'效率办公',archive:'知识管理'};
+const toolScenes:Record<string,string>={'项目灵感':'开发学习','Skills 平台':'开发学习','编程术语':'开发学习','界面设计':'设计创作','内容创作':'设计创作','知识整理':'知识管理','图片处理':'图片处理','图片压缩':'图片处理','白板绘图':'设计创作'};
+export const catalog:CatalogItem[]=[...resources.map(r=>({id:r.id,title:r.title,description:r.description,kind:r.type as CatalogItem['kind'],scene:scenes[r.id],source:'入门模板' as const,color:r.color,mark:({research:'研',visual:'/c',brief:'Br',review:'Re',workflow:'Fl',archive:'Ar'} as Record<string,string>)[r.id],resourceId:r.id})),...superTools.map((t,i)=>({id:`tool-${i}`,title:t.name,description:t.description,kind:'工具' as const,scene:toolScenes[t.category],source:'官方工具' as const,color:t.color,mark:t.mark,url:t.url,domain:t.domain}))];
+export type CatalogFilters={kind:string;scene:string;source:string;query:string;sort:string;favoriteOnly:boolean;favorites:string[]};
+export function filterCatalog(input:CatalogFilters){const q=input.query.trim().toLocaleLowerCase();let result=catalog.filter(r=>(input.kind==='全部'||r.kind===input.kind)&&(input.scene==='全部'||r.scene===input.scene)&&(input.source==='全部'||r.source===input.source)&&(!input.favoriteOnly||input.favorites.includes(r.id))&&`${r.title} ${r.description} ${r.scene} ${r.domain??''}`.toLocaleLowerCase().includes(q));if(input.sort==='name')result=[...result].sort((a,b)=>a.title.localeCompare(b.title,'zh-CN'));if(input.sort==='tools')result=[...result].sort((a,b)=>Number(!!b.url)-Number(!!a.url));return result}
