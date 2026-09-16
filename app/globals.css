@@ -45,3 +45,10 @@ html,body,.site{background:#000}
 .super-tool:hover .super-tool-icon{background:var(--lime);color:#26351b}
 }
 @media(hover:none){.resource-card:hover,.super-tool:hover{background:transparent}}
+
+/* Resource covers retain their palette before interaction. */
+.resource-card .card-art.lime{background:#d0e9a4;color:#2e4021}
+.resource-card .card-art.purple{background:#c5b7dd;color:#382d45}
+.resource-card .card-art.peach{background:#e5bda3;color:#4b362b}
+.resource-card .card-art.blue{background:#aebfca;color:#273a46}
+.resource-card .card-art.cream{background:#dedac2;color:#403e2a}
