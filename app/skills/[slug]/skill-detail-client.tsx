@@ -8,7 +8,7 @@ import {ArrowLeft,ArrowDownToLine,Check,ChevronDown,ChevronRight,Copy,FileText,F
 import {skillExamples} from '@/lib/skill-examples';
 import {skillOverviews} from '@/lib/skill-overviews';
 import {skillIcon} from '@/lib/skill-icons';
-import type {PublishedSkill,SkillFile} from '@/lib/skill-store';
+import type {PublishedSkill,SkillFile,SkillDetailData} from '@/lib/skill-store';
 
 type Tab='overview'|'files'|'versions'|'evaluation';
 type FileNode={name:string;path:string;children:FileNode[];file?:SkillFile};
@@ -45,9 +45,9 @@ function FileRow({node,depth,expanded,toggle,select}:{node:FileNode;depth:number
   return <>{folder?<button className="skill-tree-row" style={{paddingLeft:16+depth*22}} onClick={()=>toggle(node.path)} aria-expanded={expanded.has(node.path)}>{expanded.has(node.path)?<ChevronDown size={14}/>:<ChevronRight size={14}/>}<Folder size={16}/><span>{node.name}</span></button>:<button className="skill-tree-row" style={{paddingLeft:30+depth*22}} onClick={()=>select(node.file!)}><FileText size={16}/><span>{node.name}</span><small>{formatSize(node.file!.size)}</small></button>}{folder&&expanded.has(node.path)&&node.children.map(child=><FileRow key={child.path} node={child} depth={depth+1} expanded={expanded} toggle={toggle} select={select}/>)}</>;
 }
 
-export default function SkillDetailClient({slug}:{slug:string}){
-  const [skill,setSkill]=useState<PublishedSkill|null>(null),[markdown,setMarkdown]=useState(''),[error,setError]=useState(''),[tab,setTab]=useState<Tab>('overview'),[copied,setCopied]=useState(false),[version,setVersion]=useState(''),[selectedFile,setSelectedFile]=useState<SkillFile|null>(null),[fileText,setFileText]=useState(''),[fileError,setFileError]=useState(''),[expanded,setExpanded]=useState<Set<string>>(new Set()),[switching,setSwitching]=useState(false);
-  useEffect(()=>{let alive=true;const requested=new URLSearchParams(location.search).get('version');const url=`/api/skills/${encodeURIComponent(slug)}${requested?`?version=${encodeURIComponent(requested)}`:''}`;fetch(url).then(async response=>{const data=await response.json() as {error?:string;skill:PublishedSkill;version:string;markdown:string};if(!response.ok)throw new Error(data.error||'加载失败');if(alive){setSkill(data.skill);setVersion(data.version);setMarkdown(data.markdown)}}).catch(e=>{if(alive)setError(e.message)});return()=>{alive=false}},[slug]);
+export default function SkillDetailClient({slug,initialData}:{slug:string;initialData?:SkillDetailData|null}){
+  const [skill,setSkill]=useState<PublishedSkill|null>(initialData?.skill||null),[markdown,setMarkdown]=useState(initialData?.markdown||''),[error,setError]=useState(''),[tab,setTab]=useState<Tab>('overview'),[copied,setCopied]=useState(false),[version,setVersion]=useState(initialData?.version||''),[selectedFile,setSelectedFile]=useState<SkillFile|null>(null),[fileText,setFileText]=useState(''),[fileError,setFileError]=useState(''),[expanded,setExpanded]=useState<Set<string>>(new Set()),[switching,setSwitching]=useState(false);
+  useEffect(()=>{if(initialData)return;let alive=true;const requested=new URLSearchParams(location.search).get('version');const url=`/api/skills/${encodeURIComponent(slug)}${requested?`?version=${encodeURIComponent(requested)}`:''}`;fetch(url).then(async response=>{const data=await response.json() as {error?:string;skill:PublishedSkill;version:string;markdown:string};if(!response.ok)throw new Error(data.error||'加载失败');if(alive){setSkill(data.skill);setVersion(data.version);setMarkdown(data.markdown)}}).catch(e=>{if(alive)setError(e.message)});return()=>{alive=false}},[slug,initialData]);
   useEffect(()=>{if(!selectedFile||!version)return;let alive=true;setFileText('');setFileError('');fetch(`/api/skills/${encodeURIComponent(slug)}/file?version=${encodeURIComponent(version)}&path=${encodeURIComponent(selectedFile.path)}`).then(async response=>{const text=await response.text();if(!response.ok)throw new Error(text);if(alive)setFileText(text)}).catch(e=>{if(alive)setFileError(e.message)});return()=>{alive=false}},[slug,version,selectedFile]);
   const record=skill?.versions.find(item=>item.version===version)||skill?.versions[0];
   const files=useMemo(()=>record?.files?.length?record.files:[{path:'SKILL.md',size:new TextEncoder().encode(markdown).length,previewable:true}], [record,markdown]);

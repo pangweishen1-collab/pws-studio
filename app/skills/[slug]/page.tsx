@@ -1,6 +1,6 @@
 import type {Metadata} from 'next';
 import SkillDetailClient from './skill-detail-client';
-import {readSkill} from '@/lib/skill-store';
+import {readSkill,readSkillDetail} from '@/lib/skill-store';
 
 export async function generateMetadata({params}:{params:Promise<{slug:string}>}):Promise<Metadata>{
   try{
@@ -9,7 +9,9 @@ export async function generateMetadata({params}:{params:Promise<{slug:string}>})
   }catch{}
   return {title:'Skill 详情 · PWS STUDIO',description:'查看 Skill 概述、SKILL.md 文件和版本，并下载使用。',openGraph:{images:[]},twitter:{images:[]}};
 }
-export default async function SkillDetailPage({params}:{params:Promise<{slug:string}>}){
-  const {slug}=await params;
-  return <SkillDetailClient slug={slug}/>;
+export default async function SkillDetailPage({params,searchParams}:{params:Promise<{slug:string}>;searchParams:Promise<{version?:string}>}){
+  const [{slug},query]=await Promise.all([params,searchParams]);
+  let initialData=null;
+  try{initialData=await readSkillDetail(slug,query.version)}catch{}
+  return <SkillDetailClient key={`${slug}:${query.version||''}`} slug={slug} initialData={initialData}/>;
 }

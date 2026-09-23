@@ -1,4 +1,5 @@
 import {env} from 'cloudflare:workers';
+import {cache} from 'react';
 
 export type SkillFile={path:string;size:number;archivePath?:string;previewable:boolean};
 export type SkillVersion={version:string;publishedAt:string;markdownKey:string;zipKey?:string;files?:SkillFile[]};
@@ -12,12 +13,12 @@ export function skillBucket(){
   return bindings.SKILLS_BUCKET;
 }
 
-export async function readSkill(slug:string){
+export const readSkill=cache(async (slug:string)=>{
   if(!/^[a-z0-9][a-z0-9-]{1,59}$/.test(slug))return null;
   const object=await skillBucket().get(`skills/${slug}/current.json`);
   if(!object)return null;
   return JSON.parse(await object.text()) as PublishedSkill;
-}
+});
 
 export async function listSkills(){
   const bucket=skillBucket();
@@ -62,4 +63,18 @@ export async function isOwnerRequest(request:Request){
   let difference=0;
   for(let index=0;index<actualHash.length;index++)difference|=actualHash[index]^expectedHash[index];
   return difference===0;
+}
+
+export type SkillDetailData={skill:PublishedSkill;version:string;markdown:string};
+export async function readSkillDetail(slug:string,selected?:string):Promise<SkillDetailData|null>{
+ const skill=await readSkill(slug);
+ if(!skill)return null;
+ const version=skill.versions.find(item=>item.version===(selected||skill.versions[0]?.version));
+ if(!version)return null;
+ const bucket=skillBucket();
+ const [markdown,downloadCount]=await Promise.all([
+  bucket.get(version.markdownKey).then(object=>object?object.text():''),
+  countSkillDownloads(slug,bucket).catch(()=>undefined),
+ ]);
+ return {skill:{...skill,downloadCount},version:version.version,markdown};
 }
