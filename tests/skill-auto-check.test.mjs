@@ -1,0 +1,10 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {scanSkill} from '../lib/skill-auto-check.ts';
+const run=(overrides={})=>scanSkill({version:'1.0.0',markdown:'---\nname: demo\ndescription: demo\n---\n## Usage\n[Guide](docs/guide.md)',files:[{path:'SKILL.md',size:90},{path:'docs/guide.md',size:10}],texts:{'SKILL.md':'[Guide](docs/guide.md)','docs/guide.md':'[Home](../SKILL.md)'},archiveStatus:'valid',skippedFiles:0,fingerprint:'test',...overrides});
+test('valid relative and parent links resolve against each source document',()=>assert.equal(run().checks.find(c=>c.id==='links').status,'pass'));
+test('missing reference is a concrete failure',()=>assert.equal(run({texts:{'SKILL.md':'[Missing](not-here.md)'}}).checks.find(c=>c.id==='links').status,'fail'));
+test('external links and code examples do not become missing files',()=>assert.equal(run({texts:{'SKILL.md':'[Website](https://example.com)\n```md\n[x](absent.md)\n```'}}).checks.find(c=>c.id==='links').status,'review'));
+test('potential credentials are never echoed into report evidence',()=>{const token='ghp_'+'a'.repeat(30);const report=run({texts:{'tool.py':'TOKEN="'+token+'"'}});assert.equal(report.checks.find(c=>c.id==='risk-patterns').status,'review');assert.ok(!JSON.stringify(report).includes(token))});
+test('all five dimensions remain present and runtime quality is never fabricated',()=>{const r=run();assert.deepEqual([...new Set(r.checks.map(c=>c.dimension))].sort(),['A','C','E','R','T']);assert.equal(r.checks.find(c=>c.id==='effectiveness').status,'manual');assert.equal(r.score,undefined)});
+test('invalid archive is failed and scan omissions are disclosed',()=>{const r=run({archiveStatus:'invalid',skippedFiles:4});assert.equal(r.checks.find(c=>c.id==='archive').status,'fail');assert.equal(r.checks.find(c=>c.id==='coverage').status,'review')});

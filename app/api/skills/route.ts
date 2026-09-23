@@ -1,3 +1,4 @@
+import {getAutoReport} from '@/lib/skill-auto-report';
 import {isOwnerRequest,listSkills,readSkill,skillBucket,type PublishedSkill,type SkillFile} from '@/lib/skill-store';
 import {openSkillArchive} from '@/lib/skill-archive';
 
@@ -57,5 +58,7 @@ export async function POST(request:Request){
   const source=sourceText?JSON.parse(sourceText) as PublishedSkill['source']:existing?.source;
   const skill:PublishedSkill={source,slug,title,summary,category,tags,author,updatedAt:publishedAt,versions:[{version,publishedAt,markdownKey,zipKey,files},...(existing?.versions||[])]};
   await bucket.put(`skills/${slug}/current.json`,JSON.stringify(skill),{httpMetadata:{contentType:'application/json'}});
-  return Response.json({skill},{status:201});
+  let evaluationStatus='complete';
+  try{await getAutoReport(slug,skill.versions[0])}catch{evaluationStatus='pending'}
+  return Response.json({skill,evaluationStatus},{status:201});
 }

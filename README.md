@@ -44,3 +44,15 @@ node scripts/deploy-cloudflare.mjs
 
 Worker 名称为 `pws-studio`，R2 存储桶为 `pws-studio-skills`，绑定为 `SKILLS_BUCKET`。
 上传密钥通过 Cloudflare Worker Secret 配置，不写入源码。
+
+## 自动检测报告
+
+每个 Skill 版本独立保存五维静态检测报告。上传时生成，历史版本首次访问 `/api/skills/<slug>/evaluation?version=<version>` 时补建；同一规则版本复用 R2 报告，避免重复解包。
+
+检查包括 ZIP 路径与大小、Markdown 相对链接、入口结构、敏感操作和疑似凭证模式。引擎不会执行下载包中的代码。环境说明与实际效果分开标注，不将关键词或通过项数量换算为质量分。
+
+```sh
+node --experimental-strip-types --test tests/skill-auto-check.test.mjs
+```
+
+修改检测规则时提升 `ENGINE_VERSION`，使已有 Skill 生成新规则版本的报告。
