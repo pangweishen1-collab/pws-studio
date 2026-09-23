@@ -1,0 +1,172 @@
+[
+  {
+    "slug": "github-frontend-design",
+    "title": "前端视觉设计",
+    "summary": "建立鲜明的视觉方向，围绕字体、配色与布局打造有辨识度的网页界面。",
+    "author": "Anthropic",
+    "category": "设计Skill",
+    "tags": "设计Skill,GitHub,开源",
+    "version": "1.0.0-source.34040c9c",
+    "source": {
+      "repo": "anthropics/skills",
+      "stars": 177717,
+      "commit": "34040c9c568585f6929bedeaad110ad08f079624",
+      "checkedAt": "2026-09-23T08:11:49.149641+00:00",
+      "url": "https://github.com/anthropics/skills/tree/34040c9c568585f6929bedeaad110ad08f079624/skills/frontend-design",
+      "license": "Apache-2.0"
+    }
+  },
+  {
+    "slug": "github-canvas-design",
+    "title": "海报与静态视觉设计",
+    "summary": "从设计理念出发制作原创海报与视觉作品，输出 PNG 或 PDF，并提供配套字体资源。",
+    "author": "Anthropic",
+    "category": "设计Skill",
+    "tags": "设计Skill,GitHub,开源",
+    "version": "1.0.0-source.34040c9c",
+    "source": {
+      "repo": "anthropics/skills",
+      "stars": 177717,
+      "commit": "34040c9c568585f6929bedeaad110ad08f079624",
+      "checkedAt": "2026-09-23T08:11:49.149641+00:00",
+      "url": "https://github.com/anthropics/skills/tree/34040c9c568585f6929bedeaad110ad08f079624/skills/canvas-design",
+      "license": "Apache-2.0"
+    }
+  },
+  {
+    "slug": "github-algorithmic-art",
+    "title": "生成式艺术",
+    "summary": "使用 p5.js、可复现随机种子与可调参数创作流场、粒子及算法艺术。",
+    "author": "Anthropic",
+    "category": "设计Skill",
+    "tags": "设计Skill,GitHub,开源",
+    "version": "1.0.0-source.34040c9c",
+    "source": {
+      "repo": "anthropics/skills",
+      "stars": 177717,
+      "commit": "34040c9c568585f6929bedeaad110ad08f079624",
+      "checkedAt": "2026-09-23T08:11:49.149641+00:00",
+      "url": "https://github.com/anthropics/skills/tree/34040c9c568585f6929bedeaad110ad08f079624/skills/algorithmic-art",
+      "license": "Apache-2.0"
+    }
+  },
+  {
+    "slug": "github-brand-guidelines",
+    "title": "Anthropic 品牌规范",
+    "summary": "将 Anthropic 的官方配色与字体规范应用于设计产物，适合学习和使用该品牌的视觉风格。",
+    "author": "Anthropic",
+    "category": "设计Skill",
+    "tags": "设计Skill,GitHub,开源",
+    "version": "1.0.0-source.34040c9c",
+    "source": {
+      "repo": "anthropics/skills",
+      "stars": 177717,
+      "commit": "34040c9c568585f6929bedeaad110ad08f079624",
+      "checkedAt": "2026-09-23T08:11:49.149641+00:00",
+      "url": "https://github.com/anthropics/skills/tree/34040c9c568585f6929bedeaad110ad08f079624/skills/brand-guidelines",
+      "license": "Apache-2.0"
+    }
+  },
+  {
+    "slug": "github-theme-factory",
+    "title": "主题与配色工坊",
+    "summary": "为演示、文档、报告与网页应用统一主题，提供预设字体配色，也支持生成新主题。",
+    "author": "Anthropic",
+    "category": "设计Skill",
+    "tags": "设计Skill,GitHub,开源",
+    "version": "1.0.0-source.34040c9c",
+    "source": {
+      "repo": "anthropics/skills",
+      "stars": 177717,
+      "commit": "34040c9c568585f6929bedeaad110ad08f079624",
+      "checkedAt": "2026-09-23T08:11:49.149641+00:00",
+      "url": "https://github.com/anthropics/skills/tree/34040c9c568585f6929bedeaad110ad08f079624/skills/theme-factory",
+      "license": "Apache-2.0"
+    }
+  },
+  {
+    "slug": "github-ui-ux-pro-max",
+    "title": "UI/UX Pro Max",
+    "summary": "检索设计风格、配色、字体、图表与交互规范，为多技术栈界面提供设计决策参考。",
+    "author": "nextlevelbuilder",
+    "category": "设计Skill",
+    "tags": "设计Skill,GitHub,开源",
+    "version": "1.0.0-source.dcc40ff5",
+    "source": {
+      "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
+      "stars": 129980,
+      "commit": "dcc40ff5133ef78276117db0cc34e7b83cc8aeba",
+      "checkedAt": "2026-09-23T08:11:52.350424+00:00",
+      "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/tree/dcc40ff5133ef78276117db0cc34e7b83cc8aeba/.claude/skills/ui-ux-pro-max",
+      "license": "MIT"
+    }
+  },
+  {
+    "slug": "github-design-system",
+    "title": "设计系统与 Design Tokens",
+    "summary": "整理分层设计变量、组件规范、间距与字体尺度，让界面和品牌演示保持一致。",
+    "author": "claudekit",
+    "category": "设计Skill",
+    "tags": "设计Skill,GitHub,开源",
+    "version": "1.0.0-source.dcc40ff5",
+    "source": {
+      "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
+      "stars": 129980,
+      "commit": "dcc40ff5133ef78276117db0cc34e7b83cc8aeba",
+      "checkedAt": "2026-09-23T08:11:52.350424+00:00",
+      "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/tree/dcc40ff5133ef78276117db0cc34e7b83cc8aeba/.claude/skills/design-system",
+      "license": "MIT"
+    }
+  },
+  {
+    "slug": "github-banner-design",
+    "title": "Banner 与广告视觉设计",
+    "summary": "面向社交媒体、广告及网站首屏规划横幅，提供尺寸、构图与多种视觉方向；生成图片需配套工具。",
+    "author": "claudekit",
+    "category": "设计Skill",
+    "tags": "设计Skill,GitHub,开源",
+    "version": "1.0.0-source.dcc40ff5",
+    "source": {
+      "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
+      "stars": 129980,
+      "commit": "dcc40ff5133ef78276117db0cc34e7b83cc8aeba",
+      "checkedAt": "2026-09-23T08:11:52.350424+00:00",
+      "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/tree/dcc40ff5133ef78276117db0cc34e7b83cc8aeba/.claude/skills/banner-design",
+      "license": "MIT"
+    }
+  },
+  {
+    "slug": "github-ui-styling",
+    "title": "UI 样式与组件设计",
+    "summary": "结合 shadcn/ui 与 Tailwind 构建响应式界面，覆盖主题、深色模式与无障碍组件。",
+    "author": "claudekit",
+    "category": "设计Skill",
+    "tags": "设计Skill,GitHub,开源",
+    "version": "1.0.0-source.dcc40ff5",
+    "source": {
+      "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
+      "stars": 129980,
+      "commit": "dcc40ff5133ef78276117db0cc34e7b83cc8aeba",
+      "checkedAt": "2026-09-23T08:11:52.350424+00:00",
+      "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/tree/dcc40ff5133ef78276117db0cc34e7b83cc8aeba/.claude/skills/ui-styling",
+      "license": "MIT"
+    }
+  },
+  {
+    "slug": "github-impeccable",
+    "title": "Impeccable 界面精修",
+    "summary": "审视并改进界面层级、排版、交互、动效和无障碍，覆盖审查、精修与设计系统提取。",
+    "author": "Paul Bakaus",
+    "category": "设计Skill",
+    "tags": "设计Skill,GitHub,开源",
+    "version": "1.0.0-source.e0881d2d",
+    "source": {
+      "repo": "pbakaus/impeccable",
+      "stars": 70010,
+      "commit": "e0881d2de397d5e9761d7b35ff5017d8f5ebf69b",
+      "checkedAt": "2026-09-23T08:12:02.284162+00:00",
+      "url": "https://github.com/pbakaus/impeccable/tree/e0881d2de397d5e9761d7b35ff5017d8f5ebf69b/.agents/skills/impeccable",
+      "license": "Apache-2.0"
+    }
+  }
+]

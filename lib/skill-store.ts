@@ -2,7 +2,7 @@ import {env} from 'cloudflare:workers';
 
 export type SkillFile={path:string;size:number;archivePath?:string;previewable:boolean};
 export type SkillVersion={version:string;publishedAt:string;markdownKey:string;zipKey?:string;files?:SkillFile[]};
-export type PublishedSkill={slug:string;title:string;summary:string;category:string;tags:string[];author:string;updatedAt:string;versions:SkillVersion[]};
+export type PublishedSkill={slug:string;title:string;summary:string;category:string;tags:string[];author:string;updatedAt:string;versions:SkillVersion[];downloadCount?:number;favoriteCount?:number;source?:{repo:string;url:string;stars:number;commit:string;checkedAt:string;license:string}};
 
 type SkillEnv={SKILLS_BUCKET?:R2Bucket;SKILL_UPLOAD_KEY?:string};
 const bindings=env as unknown as SkillEnv;
@@ -29,10 +29,27 @@ export async function listSkills(){
       const object=await bucket.get(`${prefix}current.json`);
       return object?JSON.parse(await object.text()) as PublishedSkill:null;
     }));
-    result.push(...records.filter((item):item is PublishedSkill=>item!==null));
+    result.push(...records.filter((item):item is PublishedSkill=>item!==null&&item.slug!=='demo-skill'));
     cursor=page.truncated?page.cursor:undefined;
   }while(cursor);
+  await Promise.all(result.map(async skill=>{[skill.downloadCount,skill.favoriteCount]=await Promise.all([countSkillDownloads(skill.slug,bucket),countSkillFavorites(skill.slug,bucket)])}));
   return result.sort((a,b)=>b.updatedAt.localeCompare(a.updatedAt));
+}
+
+export async function countSkillDownloads(slug:string,bucket:R2Bucket){
+  let cursor:string|undefined,count=0;
+  do{
+    const page=await bucket.list({prefix:`skills/${slug}/downloads/`,cursor,limit:1000});
+    count+=page.objects.length;
+    cursor=page.truncated?page.cursor:undefined;
+  }while(cursor);
+  return count;
+}
+
+export async function countSkillFavorites(slug:string,bucket:R2Bucket){
+ let cursor:string|undefined,count=0;
+ do{const page=await bucket.list({prefix:`skills/${slug}/favorites/`,cursor,limit:1000});count+=page.objects.length;cursor=page.truncated?page.cursor:undefined;}while(cursor);
+ return count;
 }
 
 export async function isOwnerRequest(request:Request){

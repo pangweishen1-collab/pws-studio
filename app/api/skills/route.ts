@@ -2,7 +2,7 @@ import {isOwnerRequest,listSkills,readSkill,skillBucket,type PublishedSkill,type
 import {openSkillArchive} from '@/lib/skill-archive';
 
 export async function GET(){
-  try{return Response.json({skills:await listSkills()});}
+  try{return Response.json({skills:(await listSkills()).map(skill=>({...skill,versions:skill.versions.map(({files,...version})=>version)}))},{headers:{'Cache-Control':'no-store'}});}
   catch{return Response.json({error:'Skill 列表暂时不可用'}, {status:503});}
 }
 
@@ -13,7 +13,7 @@ export async function POST(request:Request){
   let data:FormData;
   try{data=await request.formData();}catch{return Response.json({error:'上传内容无法读取'}, {status:400});}
   const field=(key:string)=>String(data.get(key)||'').trim();
-  const title=field('title'),slug=field('slug').toLowerCase(),summary=field('summary'),category=field('category'),author=field('author')||'庞伟深',version=field('version');
+  const title=field('title'),slug=field('slug').toLowerCase(),summary=field('summary'),category=field('category'),version=field('version');
   const tags=field('tags').split(/[,，]/).map(tag=>tag.trim()).filter(Boolean).slice(0,8);
   const markdown=data.get('markdown'),zip=data.get('zip');
   if(!/^[a-z0-9][a-z0-9-]{1,59}$/.test(slug)||!title||title.length>80||!summary||summary.length>500||!category||category.length>40||!/^\d+\.\d+\.\d+(?:-[a-z0-9.-]+)?$/.test(version))return Response.json({error:'请检查名称、英文标识、简介、分类和版本号'}, {status:400});
@@ -48,11 +48,14 @@ export async function POST(request:Request){
   if(!files.length)files=[{path:'SKILL.md',size:new TextEncoder().encode(markdownText).byteLength,previewable:true}];
   const existing=await readSkill(slug);
   if(existing?.versions.some(item=>item.version===version))return Response.json({error:'该版本号已经发布'}, {status:409});
+  const author=field('author')||existing?.author||'庞伟深';
   const bucket=skillBucket(),publishedAt=new Date().toISOString(),base=`skills/${slug}/versions/${encodeURIComponent(version)}`;
   const markdownKey=`${base}/SKILL.md`,zipKey=zip instanceof File&&zip.size>0?`${base}/${slug}-${version}.zip`:undefined;
   await bucket.put(markdownKey,markdownText,{httpMetadata:{contentType:'text/markdown; charset=utf-8'}});
   if(zipKey&&zipData)await bucket.put(zipKey,zipData,{httpMetadata:{contentType:'application/zip'}});
-  const skill:PublishedSkill={slug,title,summary,category,tags,author,updatedAt:publishedAt,versions:[{version,publishedAt,markdownKey,zipKey,files},...(existing?.versions||[])]};
+  const sourceText=field('source');
+  const source=sourceText?JSON.parse(sourceText) as PublishedSkill['source']:existing?.source;
+  const skill:PublishedSkill={source,slug,title,summary,category,tags,author,updatedAt:publishedAt,versions:[{version,publishedAt,markdownKey,zipKey,files},...(existing?.versions||[])]};
   await bucket.put(`skills/${slug}/current.json`,JSON.stringify(skill),{httpMetadata:{contentType:'application/json'}});
   return Response.json({skill},{status:201});
 }

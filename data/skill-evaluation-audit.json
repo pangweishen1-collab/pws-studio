@@ -1,0 +1,1611 @@
+{
+  "checkedAt": "2026-09-23T08:32:56.071Z",
+  "scope": "SKILL.md 与文件清单静态检查；未执行 Skill",
+  "reports": [
+    {
+      "slug": "designing-ranked-medals",
+      "version": "1.0.0",
+      "missing": [],
+      "dimensions": [
+        {
+          "key": "T",
+          "en": "Trust",
+          "name": "可信任度",
+          "color": "#50b780",
+          "checks": [
+            {
+              "label": "说明限制或操作边界",
+              "passed": true,
+              "evidence": "- Background elements are support only; they must not become a complete scene."
+            },
+            {
+              "label": "说明保护、原创或安全要求",
+              "passed": false,
+              "evidence": "当前 SKILL.md 未识别到对应说明，需要人工复核；不等于实际不具备该能力。"
+            },
+            {
+              "label": "包含作者来源或文档元信息",
+              "passed": true,
+              "evidence": "SKILL.md 包含前置元信息；这不是作者身份认证。"
+            }
+          ]
+        },
+        {
+          "key": "R",
+          "en": "Reliability",
+          "name": "可靠性",
+          "color": "#508fed",
+          "checks": [
+            {
+              "label": "提供 ZIP 文件包",
+              "passed": true,
+              "evidence": "当前版本具有 ZIP 下载文件；不代表依赖已安装。"
+            },
+            {
+              "label": "已识别的相对链接文件齐全",
+              "passed": true,
+              "evidence": "已识别的 Markdown 相对链接未发现缺失；不覆盖动态路径、外部工具与脚本运行依赖。"
+            },
+            {
+              "label": "说明验证或检查步骤",
+              "passed": true,
+              "evidence": "## Quality Check Before Generation"
+            }
+          ]
+        },
+        {
+          "key": "A",
+          "en": "Adaptability",
+          "name": "适用性",
+          "color": "#eea039",
+          "checks": [
+            {
+              "label": "说明工具或运行环境",
+              "passed": true,
+              "evidence": "- Keep one font family/structure across the three ranks, while changing color/material/detail by rank."
+            },
+            {
+              "label": "说明输入或需求",
+              "passed": true,
+              "evidence": "description: Use when designing, generating, or iterating a themed ranked medal/badge set with TOP1, TOP2, TOP3, and an unranked base tier, especially when a reference poster/image should supply the subject, title style, colors, and theme elements."
+            },
+            {
+              "label": "说明使用场景或范围",
+              "passed": true,
+              "evidence": "description: Use when designing, generating, or iterating a themed ranked medal/badge set with TOP1, TOP2, TOP3, and an unranked base tier, especially when a reference poster/image should supply the subject, title style, colors, and theme elements."
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "en": "Convention",
+          "name": "规范性",
+          "color": "#a170dd",
+          "checks": [
+            {
+              "label": "包含 SKILL.md",
+              "passed": true,
+              "evidence": "根据当前版本文件清单检查入口文件。"
+            },
+            {
+              "label": "具有分级标题",
+              "passed": true,
+              "evidence": "检查 Markdown 二级标题。"
+            },
+            {
+              "label": "具有列表或结构化步骤",
+              "passed": true,
+              "evidence": "检查 Markdown 列表或编号步骤。"
+            }
+          ]
+        },
+        {
+          "key": "E",
+          "en": "Effectiveness",
+          "name": "有效性",
+          "color": "#e77b9b",
+          "checks": [
+            {
+              "label": "说明预期成果",
+              "passed": true,
+              "evidence": "Create a coherent four-tier medal family that reads immediately as **unranked < TOP3 < TOP2 < TOP1**. The medal itself is an irregular, cutout-style composition—not a card, poster, or filled background scene."
+            },
+            {
+              "label": "说明执行方法",
+              "passed": false,
+              "evidence": "当前 SKILL.md 未识别到对应说明，需要人工复核；不等于实际不具备该能力。"
+            },
+            {
+              "label": "说明结果要求或验收约束",
+              "passed": true,
+              "evidence": "- Each medal must occupy a visually **1:1 square bounding area**: similar width/height, scale, center, baseline, and spacing."
+            }
+          ]
+        }
+      ],
+      "runtime": "未执行"
+    },
+    {
+      "slug": "github-impeccable",
+      "version": "1.0.0-source.e0881d2d",
+      "missing": [],
+      "dimensions": [
+        {
+          "key": "T",
+          "en": "Trust",
+          "name": "可信任度",
+          "color": "#50b780",
+          "checks": [
+            {
+              "label": "说明限制或操作边界",
+              "passed": true,
+              "evidence": "description: Use when the user wants to design, redesign, shape, critique, audit, polish, clarify, distill, harden, optimize, adapt, animate, colorize, extract, or otherwise improve a frontend interface. Covers websites, landing pages, dashboards, product UI, "
+            },
+            {
+              "label": "说明保护、原创或安全要求",
+              "passed": true,
+              "evidence": "- **Visual authority is evidence, not a filename.** Missing DESIGN.md alone does not make a project greenfield; new-work decides whether to preserve, expand, or replace the incumbent world."
+            },
+            {
+              "label": "包含作者来源或文档元信息",
+              "passed": true,
+              "evidence": "SKILL.md 包含前置元信息；这不是作者身份认证。"
+            }
+          ]
+        },
+        {
+          "key": "R",
+          "en": "Reliability",
+          "name": "可靠性",
+          "color": "#508fed",
+          "checks": [
+            {
+              "label": "提供 ZIP 文件包",
+              "passed": true,
+              "evidence": "当前版本具有 ZIP 下载文件；不代表依赖已安装。"
+            },
+            {
+              "label": "已识别的相对链接文件齐全",
+              "passed": true,
+              "evidence": "已识别的 Markdown 相对链接未发现缺失；不覆盖动态路径、外部工具与脚本运行依赖。"
+            },
+            {
+              "label": "说明验证或检查步骤",
+              "passed": true,
+              "evidence": "description: Use when the user wants to design, redesign, shape, critique, audit, polish, clarify, distill, harden, optimize, adapt, animate, colorize, extract, or otherwise improve a frontend interface. Covers websites, landing pages, dashboards, product UI, "
+            }
+          ]
+        },
+        {
+          "key": "A",
+          "en": "Adaptability",
+          "name": "适用性",
+          "color": "#eea039",
+          "checks": [
+            {
+              "label": "说明工具或运行环境",
+              "passed": true,
+              "evidence": "description: Use when the user wants to design, redesign, shape, critique, audit, polish, clarify, distill, harden, optimize, adapt, animate, colorize, extract, or otherwise improve a frontend interface. Covers websites, landing pages, dashboards, product UI, "
+            },
+            {
+              "label": "说明输入或需求",
+              "passed": true,
+              "evidence": "description: Use when the user wants to design, redesign, shape, critique, audit, polish, clarify, distill, harden, optimize, adapt, animate, colorize, extract, or otherwise improve a frontend interface. Covers websites, landing pages, dashboards, product UI, "
+            },
+            {
+              "label": "说明使用场景或范围",
+              "passed": true,
+              "evidence": "description: Use when the user wants to design, redesign, shape, critique, audit, polish, clarify, distill, harden, optimize, adapt, animate, colorize, extract, or otherwise improve a frontend interface. Covers websites, landing pages, dashboards, product UI, "
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "en": "Convention",
+          "name": "规范性",
+          "color": "#a170dd",
+          "checks": [
+            {
+              "label": "包含 SKILL.md",
+              "passed": true,
+              "evidence": "根据当前版本文件清单检查入口文件。"
+            },
+            {
+              "label": "具有分级标题",
+              "passed": true,
+              "evidence": "检查 Markdown 二级标题。"
+            },
+            {
+              "label": "具有列表或结构化步骤",
+              "passed": true,
+              "evidence": "检查 Markdown 列表或编号步骤。"
+            }
+          ]
+        },
+        {
+          "key": "E",
+          "en": "Effectiveness",
+          "name": "有效性",
+          "color": "#e77b9b",
+          "checks": [
+            {
+              "label": "说明预期成果",
+              "passed": true,
+              "evidence": "This skill gives you the tools and permission to create design that earns to be called out-of-distribution craft: Whereas before, your design work would have been safe, timid and measured, you now approach every design task as an award-winning design director "
+            },
+            {
+              "label": "说明执行方法",
+              "passed": true,
+              "evidence": "## How to design"
+            },
+            {
+              "label": "说明结果要求或验收约束",
+              "passed": true,
+              "evidence": "- Go all out. No hedging, no shortcuts. The deliverable must be complete (except assets the user must provide)."
+            }
+          ]
+        }
+      ],
+      "runtime": "未执行"
+    },
+    {
+      "slug": "github-ui-styling",
+      "version": "1.0.0-source.dcc40ff5",
+      "missing": [],
+      "dimensions": [
+        {
+          "key": "T",
+          "en": "Trust",
+          "name": "可信任度",
+          "color": "#50b780",
+          "checks": [
+            {
+              "label": "说明限制或操作边界",
+              "passed": true,
+              "evidence": "### Alternative: Tailwind-Only Setup"
+            },
+            {
+              "label": "说明保护、原创或安全要求",
+              "passed": true,
+              "evidence": "- TypeScript-first with full type safety"
+            },
+            {
+              "label": "包含作者来源或文档元信息",
+              "passed": true,
+              "evidence": "SKILL.md 包含前置元信息；这不是作者身份认证。"
+            }
+          ]
+        },
+        {
+          "key": "R",
+          "en": "Reliability",
+          "name": "可靠性",
+          "color": "#508fed",
+          "checks": [
+            {
+              "label": "提供 ZIP 文件包",
+              "passed": true,
+              "evidence": "当前版本具有 ZIP 下载文件；不代表依赖已安装。"
+            },
+            {
+              "label": "已识别的相对链接文件齐全",
+              "passed": true,
+              "evidence": "已识别的 Markdown 相对链接未发现缺失；不覆盖动态路径、外部工具与脚本运行依赖。"
+            },
+            {
+              "label": "说明验证或检查步骤",
+              "passed": true,
+              "evidence": "- Form & input components (Button, Input, Select, Checkbox, Date Picker, Form validation)"
+            }
+          ]
+        },
+        {
+          "key": "A",
+          "en": "Adaptability",
+          "name": "适用性",
+          "color": "#eea039",
+          "checks": [
+            {
+              "label": "说明工具或运行环境",
+              "passed": true,
+              "evidence": "description: Create beautiful, accessible user interfaces with shadcn/ui components (built on Radix UI + Tailwind), Tailwind CSS utility-first styling, and canvas-based visual designs. Use when building user interfaces, implementing design systems, creating re"
+            },
+            {
+              "label": "说明输入或需求",
+              "passed": true,
+              "evidence": "description: Create beautiful, accessible user interfaces with shadcn/ui components (built on Radix UI + Tailwind), Tailwind CSS utility-first styling, and canvas-based visual designs. Use when building user interfaces, implementing design systems, creating re"
+            },
+            {
+              "label": "说明使用场景或范围",
+              "passed": true,
+              "evidence": "description: Create beautiful, accessible user interfaces with shadcn/ui components (built on Radix UI + Tailwind), Tailwind CSS utility-first styling, and canvas-based visual designs. Use when building user interfaces, implementing design systems, creating re"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "en": "Convention",
+          "name": "规范性",
+          "color": "#a170dd",
+          "checks": [
+            {
+              "label": "包含 SKILL.md",
+              "passed": true,
+              "evidence": "根据当前版本文件清单检查入口文件。"
+            },
+            {
+              "label": "具有分级标题",
+              "passed": true,
+              "evidence": "检查 Markdown 二级标题。"
+            },
+            {
+              "label": "具有列表或结构化步骤",
+              "passed": true,
+              "evidence": "检查 Markdown 列表或编号步骤。"
+            }
+          ]
+        },
+        {
+          "key": "E",
+          "en": "Effectiveness",
+          "name": "有效性",
+          "color": "#e77b9b",
+          "checks": [
+            {
+              "label": "说明预期成果",
+              "passed": true,
+              "evidence": "description: Create beautiful, accessible user interfaces with shadcn/ui components (built on Radix UI + Tailwind), Tailwind CSS utility-first styling, and canvas-based visual designs. Use when building user interfaces, implementing design systems, creating re"
+            },
+            {
+              "label": "说明执行方法",
+              "passed": false,
+              "evidence": "当前 SKILL.md 未识别到对应说明，需要人工复核；不等于实际不具备该能力。"
+            },
+            {
+              "label": "说明结果要求或验收约束",
+              "passed": true,
+              "evidence": "description: Create beautiful, accessible user interfaces with shadcn/ui components (built on Radix UI + Tailwind), Tailwind CSS utility-first styling, and canvas-based visual designs. Use when building user interfaces, implementing design systems, creating re"
+            }
+          ]
+        }
+      ],
+      "runtime": "未执行"
+    },
+    {
+      "slug": "github-banner-design",
+      "version": "1.0.0-source.dcc40ff5",
+      "missing": [],
+      "dimensions": [
+        {
+          "key": "T",
+          "en": "Trust",
+          "name": "可信任度",
+          "color": "#50b780",
+          "checks": [
+            {
+              "label": "说明限制或操作边界",
+              "passed": true,
+              "evidence": "Design banners across social, ads, web, and print formats. Generate multiple art direction options with CSS-built, user-supplied, or optionally generated visual elements. This skill handles banner design only. It does not handle video editing, full website des"
+            },
+            {
+              "label": "说明保护、原创或安全要求",
+              "passed": false,
+              "evidence": "当前 SKILL.md 未识别到对应说明，需要人工复核；不等于实际不具备该能力。"
+            },
+            {
+              "label": "包含作者来源或文档元信息",
+              "passed": true,
+              "evidence": "SKILL.md 包含前置元信息；这不是作者身份认证。"
+            }
+          ]
+        },
+        {
+          "key": "R",
+          "en": "Reliability",
+          "name": "可靠性",
+          "color": "#508fed",
+          "checks": [
+            {
+              "label": "提供 ZIP 文件包",
+              "passed": true,
+              "evidence": "当前版本具有 ZIP 下载文件；不代表依赖已安装。"
+            },
+            {
+              "label": "已识别的相对链接文件齐全",
+              "passed": true,
+              "evidence": "已识别的 Markdown 相对链接未发现缺失；不覆盖动态路径、外部工具与脚本运行依赖。"
+            },
+            {
+              "label": "说明验证或检查步骤",
+              "passed": true,
+              "evidence": "3. **Compose the final banner** — overlay the headline, supporting copy, CTA, and logo in HTML/CSS, then verify hierarchy, safe zones, contrast, and crop behavior at the exact target size"
+            }
+          ]
+        },
+        {
+          "key": "A",
+          "en": "Adaptability",
+          "name": "适用性",
+          "color": "#eea039",
+          "checks": [
+            {
+              "label": "说明工具或运行环境",
+              "passed": true,
+              "evidence": "Design banners across social, ads, web, and print formats. Generate multiple art direction options with CSS-built, user-supplied, or optionally generated visual elements. This skill handles banner design only. It does not handle video editing, full website des"
+            },
+            {
+              "label": "说明输入或需求",
+              "passed": true,
+              "evidence": "Design banners across social, ads, web, and print formats. Generate multiple art direction options with CSS-built, user-supplied, or optionally generated visual elements. This skill handles banner design only. It does not handle video editing, full website des"
+            },
+            {
+              "label": "说明使用场景或范围",
+              "passed": true,
+              "evidence": "## When to Activate"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "en": "Convention",
+          "name": "规范性",
+          "color": "#a170dd",
+          "checks": [
+            {
+              "label": "包含 SKILL.md",
+              "passed": true,
+              "evidence": "根据当前版本文件清单检查入口文件。"
+            },
+            {
+              "label": "具有分级标题",
+              "passed": true,
+              "evidence": "检查 Markdown 二级标题。"
+            },
+            {
+              "label": "具有列表或结构化步骤",
+              "passed": true,
+              "evidence": "检查 Markdown 列表或编号步骤。"
+            }
+          ]
+        },
+        {
+          "key": "E",
+          "en": "Effectiveness",
+          "name": "有效性",
+          "color": "#e77b9b",
+          "checks": [
+            {
+              "label": "说明预期成果",
+              "passed": true,
+              "evidence": "description: \"Design banners for social media, ads, website heroes, creative assets, and print. Multiple art direction options with optional generated or supplied visuals. Actions: design, create, generate banner. Platforms: Facebook, Twitter/X, LinkedIn, YouT"
+            },
+            {
+              "label": "说明执行方法",
+              "passed": true,
+              "evidence": "This workflow is self-contained: it requires no sibling skills or skill-relative scripts. Use `references/banner-sizes-and-styles.md` for the bundled size, safe-zone, and art-direction guidance. Browser research, image generation, and screenshot tooling are op"
+            },
+            {
+              "label": "说明结果要求或验收约束",
+              "passed": true,
+              "evidence": "3. **Compose the final banner** — overlay the headline, supporting copy, CTA, and logo in HTML/CSS, then verify hierarchy, safe zones, contrast, and crop behavior at the exact target size"
+            }
+          ]
+        }
+      ],
+      "runtime": "未执行"
+    },
+    {
+      "slug": "github-design-system",
+      "version": "1.0.0-source.dcc40ff5",
+      "missing": [],
+      "dimensions": [
+        {
+          "key": "T",
+          "en": "Trust",
+          "name": "可信任度",
+          "color": "#50b780",
+          "checks": [
+            {
+              "label": "说明限制或操作边界",
+              "passed": true,
+              "evidence": "3. Use Chart.js for charts (NOT CSS-only bars)"
+            },
+            {
+              "label": "说明保护、原创或安全要求",
+              "passed": false,
+              "evidence": "当前 SKILL.md 未识别到对应说明，需要人工复核；不等于实际不具备该能力。"
+            },
+            {
+              "label": "包含作者来源或文档元信息",
+              "passed": true,
+              "evidence": "SKILL.md 包含前置元信息；这不是作者身份认证。"
+            }
+          ]
+        },
+        {
+          "key": "R",
+          "en": "Reliability",
+          "name": "可靠性",
+          "color": "#508fed",
+          "checks": [
+            {
+              "label": "提供 ZIP 文件包",
+              "passed": true,
+              "evidence": "当前版本具有 ZIP 下载文件；不代表依赖已安装。"
+            },
+            {
+              "label": "已识别的相对链接文件齐全",
+              "passed": true,
+              "evidence": "已识别的 Markdown 相对链接未发现缺失；不覆盖动态路径、外部工具与脚本运行依赖。"
+            },
+            {
+              "label": "说明验证或检查步骤",
+              "passed": true,
+              "evidence": "**Validate usage:**"
+            }
+          ]
+        },
+        {
+          "key": "A",
+          "en": "Adaptability",
+          "name": "适用性",
+          "color": "#eea039",
+          "checks": [
+            {
+              "label": "说明工具或运行环境",
+              "passed": true,
+              "evidence": "description: Token architecture, component specifications, and slide generation. Three-layer tokens (primitive→semantic→component), CSS variables, spacing/typography scales, component specs, strategic slide creation. Use for design tokens, systematic design, b"
+            },
+            {
+              "label": "说明输入或需求",
+              "passed": true,
+              "evidence": "- Tailwind theme configuration"
+            },
+            {
+              "label": "说明使用场景或范围",
+              "passed": true,
+              "evidence": "## When to Use"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "en": "Convention",
+          "name": "规范性",
+          "color": "#a170dd",
+          "checks": [
+            {
+              "label": "包含 SKILL.md",
+              "passed": true,
+              "evidence": "根据当前版本文件清单检查入口文件。"
+            },
+            {
+              "label": "具有分级标题",
+              "passed": true,
+              "evidence": "检查 Markdown 二级标题。"
+            },
+            {
+              "label": "具有列表或结构化步骤",
+              "passed": true,
+              "evidence": "检查 Markdown 列表或编号步骤。"
+            }
+          ]
+        },
+        {
+          "key": "E",
+          "en": "Effectiveness",
+          "name": "有效性",
+          "color": "#e77b9b",
+          "checks": [
+            {
+              "label": "说明预期成果",
+              "passed": true,
+              "evidence": "**Generate tokens:**"
+            },
+            {
+              "label": "说明执行方法",
+              "passed": false,
+              "evidence": "当前 SKILL.md 未识别到对应说明，需要人工复核；不等于实际不具备该能力。"
+            },
+            {
+              "label": "说明结果要求或验收约束",
+              "passed": true,
+              "evidence": "| `validate-tokens.cjs` | Check for hardcoded values in code |"
+            }
+          ]
+        }
+      ],
+      "runtime": "未执行"
+    },
+    {
+      "slug": "github-ui-ux-pro-max",
+      "version": "1.0.0-source.dcc40ff5",
+      "missing": [],
+      "dimensions": [
+        {
+          "key": "T",
+          "en": "Trust",
+          "name": "可信任度",
+          "color": "#50b780",
+          "checks": [
+            {
+              "label": "说明限制或操作边界",
+              "passed": true,
+              "evidence": "| 1 | Accessibility | CRITICAL | `ux` | Contrast 4.5:1, Alt text, Keyboard nav, Aria-labels | Removing focus rings, Icon-only buttons without labels |"
+            },
+            {
+              "label": "说明保护、原创或安全要求",
+              "passed": false,
+              "evidence": "当前 SKILL.md 未识别到对应说明，需要人工复核；不等于实际不具备该能力。"
+            },
+            {
+              "label": "包含作者来源或文档元信息",
+              "passed": true,
+              "evidence": "SKILL.md 包含前置元信息；这不是作者身份认证。"
+            }
+          ]
+        },
+        {
+          "key": "R",
+          "en": "Reliability",
+          "name": "可靠性",
+          "color": "#508fed",
+          "checks": [
+            {
+              "label": "提供 ZIP 文件包",
+              "passed": true,
+              "evidence": "当前版本具有 ZIP 下载文件；不代表依赖已安装。"
+            },
+            {
+              "label": "已识别的相对链接文件齐全",
+              "passed": true,
+              "evidence": "已识别的 Markdown 相对链接未发现缺失；不覆盖动态路径、外部工具与脚本运行依赖。"
+            },
+            {
+              "label": "说明验证或检查步骤",
+              "passed": true,
+              "evidence": "Build each query around **one dominant intent**, using **2–5 meaningful terms** and one useful constraint such as product, platform, or interaction. Verify the returned domain/category, top result identity, and fit for the user's product and platform before ap"
+            }
+          ]
+        },
+        {
+          "key": "A",
+          "en": "Adaptability",
+          "name": "适用性",
+          "color": "#eea039",
+          "checks": [
+            {
+              "label": "说明工具或运行环境",
+              "passed": true,
+              "evidence": "description: \"UI/UX design intelligence for web, mobile, and desktop. This skill should be used when designing, building, reviewing, or fixing interfaces, including pages, components, design systems, accessibility, interaction, responsive layout, typography, c"
+            },
+            {
+              "label": "说明输入或需求",
+              "passed": true,
+              "evidence": "Use this Skill when the task involves **UI structure, visual design decisions, interaction patterns, or user experience quality control**: designing new pages, creating/refactoring UI components, choosing color/typography/spacing/layout systems, reviewing UI f"
+            },
+            {
+              "label": "说明使用场景或范围",
+              "passed": true,
+              "evidence": "## When to Apply"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "en": "Convention",
+          "name": "规范性",
+          "color": "#a170dd",
+          "checks": [
+            {
+              "label": "包含 SKILL.md",
+              "passed": true,
+              "evidence": "根据当前版本文件清单检查入口文件。"
+            },
+            {
+              "label": "具有分级标题",
+              "passed": true,
+              "evidence": "检查 Markdown 二级标题。"
+            },
+            {
+              "label": "具有列表或结构化步骤",
+              "passed": true,
+              "evidence": "检查 Markdown 列表或编号步骤。"
+            }
+          ]
+        },
+        {
+          "key": "E",
+          "en": "Effectiveness",
+          "name": "有效性",
+          "color": "#e77b9b",
+          "checks": [
+            {
+              "label": "说明预期成果",
+              "passed": true,
+              "evidence": "## When to Apply"
+            },
+            {
+              "label": "说明执行方法",
+              "passed": true,
+              "evidence": "If `python` is not found, try `python3`, then `py -3`. Requires Python 3.x, no external dependencies (see README for install instructions if Python is missing)."
+            },
+            {
+              "label": "说明结果要求或验收约束",
+              "passed": true,
+              "evidence": "Use this Skill when the task involves **UI structure, visual design decisions, interaction patterns, or user experience quality control**: designing new pages, creating/refactoring UI components, choosing color/typography/spacing/layout systems, reviewing UI f"
+            }
+          ]
+        }
+      ],
+      "runtime": "未执行"
+    },
+    {
+      "slug": "github-theme-factory",
+      "version": "1.0.0-source.34040c9c",
+      "missing": [],
+      "dimensions": [
+        {
+          "key": "T",
+          "en": "Trust",
+          "name": "可信任度",
+          "color": "#50b780",
+          "checks": [
+            {
+              "label": "说明限制或操作边界",
+              "passed": true,
+              "evidence": "1. **Show the theme showcase**: Display the `theme-showcase.pdf` file to allow users to see all available themes visually. Do not make any modifications to it; simply show the file for viewing."
+            },
+            {
+              "label": "说明保护、原创或安全要求",
+              "passed": false,
+              "evidence": "当前 SKILL.md 未识别到对应说明，需要人工复核；不等于实际不具备该能力。"
+            },
+            {
+              "label": "包含作者来源或文档元信息",
+              "passed": true,
+              "evidence": "SKILL.md 包含前置元信息；这不是作者身份认证。"
+            }
+          ]
+        },
+        {
+          "key": "R",
+          "en": "Reliability",
+          "name": "可靠性",
+          "color": "#508fed",
+          "checks": [
+            {
+              "label": "提供 ZIP 文件包",
+              "passed": true,
+              "evidence": "当前版本具有 ZIP 下载文件；不代表依赖已安装。"
+            },
+            {
+              "label": "已识别的相对链接文件齐全",
+              "passed": true,
+              "evidence": "已识别的 Markdown 相对链接未发现缺失；不覆盖动态路径、外部工具与脚本运行依赖。"
+            },
+            {
+              "label": "说明验证或检查步骤",
+              "passed": true,
+              "evidence": "To handle cases where none of the existing themes work for an artifact, create a custom theme. Based on provided inputs, generate a new theme similar to the ones above. Give the theme a similar name describing what the font/color combinations represent. Use an"
+            }
+          ]
+        },
+        {
+          "key": "A",
+          "en": "Adaptability",
+          "name": "适用性",
+          "color": "#eea039",
+          "checks": [
+            {
+              "label": "说明工具或运行环境",
+              "passed": true,
+              "evidence": "description: Toolkit for styling artifacts with a theme. These artifacts can be slides, docs, reportings, HTML landing pages, etc. There are 10 pre-set themes with colors/fonts that you can apply to any artifact that has been creating, or can generate a new th"
+            },
+            {
+              "label": "说明输入或需求",
+              "passed": true,
+              "evidence": "name: theme-factory"
+            },
+            {
+              "label": "说明使用场景或范围",
+              "passed": true,
+              "evidence": "## Purpose"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "en": "Convention",
+          "name": "规范性",
+          "color": "#a170dd",
+          "checks": [
+            {
+              "label": "包含 SKILL.md",
+              "passed": true,
+              "evidence": "根据当前版本文件清单检查入口文件。"
+            },
+            {
+              "label": "具有分级标题",
+              "passed": true,
+              "evidence": "检查 Markdown 二级标题。"
+            },
+            {
+              "label": "具有列表或结构化步骤",
+              "passed": true,
+              "evidence": "检查 Markdown 列表或编号步骤。"
+            }
+          ]
+        },
+        {
+          "key": "E",
+          "en": "Effectiveness",
+          "name": "有效性",
+          "color": "#e77b9b",
+          "checks": [
+            {
+              "label": "说明预期成果",
+              "passed": true,
+              "evidence": "description: Toolkit for styling artifacts with a theme. These artifacts can be slides, docs, reportings, HTML landing pages, etc. There are 10 pre-set themes with colors/fonts that you can apply to any artifact that has been creating, or can generate a new th"
+            },
+            {
+              "label": "说明执行方法",
+              "passed": true,
+              "evidence": "## Usage Instructions"
+            },
+            {
+              "label": "说明结果要求或验收约束",
+              "passed": true,
+              "evidence": "To apply consistent, professional styling to presentation slide decks, use this skill. Each theme includes:"
+            }
+          ]
+        }
+      ],
+      "runtime": "未执行"
+    },
+    {
+      "slug": "github-brand-guidelines",
+      "version": "1.0.0-source.34040c9c",
+      "missing": [],
+      "dimensions": [
+        {
+          "key": "T",
+          "en": "Trust",
+          "name": "可信任度",
+          "color": "#50b780",
+          "checks": [
+            {
+              "label": "说明限制或操作边界",
+              "passed": false,
+              "evidence": "当前 SKILL.md 未识别到对应说明，需要人工复核；不等于实际不具备该能力。"
+            },
+            {
+              "label": "说明保护、原创或安全要求",
+              "passed": false,
+              "evidence": "当前 SKILL.md 未识别到对应说明，需要人工复核；不等于实际不具备该能力。"
+            },
+            {
+              "label": "包含作者来源或文档元信息",
+              "passed": true,
+              "evidence": "SKILL.md 包含前置元信息；这不是作者身份认证。"
+            }
+          ]
+        },
+        {
+          "key": "R",
+          "en": "Reliability",
+          "name": "可靠性",
+          "color": "#508fed",
+          "checks": [
+            {
+              "label": "提供 ZIP 文件包",
+              "passed": true,
+              "evidence": "当前版本具有 ZIP 下载文件；不代表依赖已安装。"
+            },
+            {
+              "label": "已识别的相对链接文件齐全",
+              "passed": true,
+              "evidence": "已识别的 Markdown 相对链接未发现缺失；不覆盖动态路径、外部工具与脚本运行依赖。"
+            },
+            {
+              "label": "说明验证或检查步骤",
+              "passed": false,
+              "evidence": "当前 SKILL.md 未识别到对应说明，需要人工复核；不等于实际不具备该能力。"
+            }
+          ]
+        },
+        {
+          "key": "A",
+          "en": "Adaptability",
+          "name": "适用性",
+          "color": "#eea039",
+          "checks": [
+            {
+              "label": "说明工具或运行环境",
+              "passed": true,
+              "evidence": "- **Note**: Fonts should be pre-installed in your environment for best results"
+            },
+            {
+              "label": "说明输入或需求",
+              "passed": false,
+              "evidence": "当前 SKILL.md 未识别到对应说明，需要人工复核；不等于实际不具备该能力。"
+            },
+            {
+              "label": "说明使用场景或范围",
+              "passed": true,
+              "evidence": "## Overview"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "en": "Convention",
+          "name": "规范性",
+          "color": "#a170dd",
+          "checks": [
+            {
+              "label": "包含 SKILL.md",
+              "passed": true,
+              "evidence": "根据当前版本文件清单检查入口文件。"
+            },
+            {
+              "label": "具有分级标题",
+              "passed": true,
+              "evidence": "检查 Markdown 二级标题。"
+            },
+            {
+              "label": "具有列表或结构化步骤",
+              "passed": true,
+              "evidence": "检查 Markdown 列表或编号步骤。"
+            }
+          ]
+        },
+        {
+          "key": "E",
+          "en": "Effectiveness",
+          "name": "有效性",
+          "color": "#e77b9b",
+          "checks": [
+            {
+              "label": "说明预期成果",
+              "passed": true,
+              "evidence": "description: Applies Anthropic's official brand colors and typography to any sort of artifact that may benefit from having Anthropic's look-and-feel. Use it when brand colors or style guidelines, visual formatting, or company design standards apply."
+            },
+            {
+              "label": "说明执行方法",
+              "passed": false,
+              "evidence": "当前 SKILL.md 未识别到对应说明，需要人工复核；不等于实际不具备该能力。"
+            },
+            {
+              "label": "说明结果要求或验收约束",
+              "passed": true,
+              "evidence": "- Preserves readability across all systems"
+            }
+          ]
+        }
+      ],
+      "runtime": "未执行"
+    },
+    {
+      "slug": "github-algorithmic-art",
+      "version": "1.0.0-source.34040c9c",
+      "missing": [],
+      "dimensions": [
+        {
+          "key": "T",
+          "en": "Trust",
+          "name": "可信任度",
+          "color": "#50b780",
+          "checks": [
+            {
+              "label": "说明限制或操作边界",
+              "passed": true,
+              "evidence": "Algorithmic expression: Vector fields constructed from mathematical functions or noise. Particles born at edges, flowing along field lines, dying when they reach equilibrium or boundaries. Multiple fields can attract, repel, or rotate particles. The visualizat"
+            },
+            {
+              "label": "说明保护、原创或安全要求",
+              "passed": true,
+              "evidence": "description: Creating algorithmic art using p5.js with seeded randomness and interactive parameter exploration. Use this when users request creating art using code, generative art, algorithmic art, flow fields, or particle systems. Create original algorithmic "
+            },
+            {
+              "label": "包含作者来源或文档元信息",
+              "passed": true,
+              "evidence": "SKILL.md 包含前置元信息；这不是作者身份认证。"
+            }
+          ]
+        },
+        {
+          "key": "R",
+          "en": "Reliability",
+          "name": "可靠性",
+          "color": "#508fed",
+          "checks": [
+            {
+              "label": "提供 ZIP 文件包",
+              "passed": true,
+              "evidence": "当前版本具有 ZIP 下载文件；不代表依赖已安装。"
+            },
+            {
+              "label": "已识别的相对链接文件齐全",
+              "passed": true,
+              "evidence": "已识别的 Markdown 相对链接未发现缺失；不覆盖动态路径、外部工具与脚本运行依赖。"
+            },
+            {
+              "label": "说明验证或检查步骤",
+              "passed": false,
+              "evidence": "当前 SKILL.md 未识别到对应说明，需要人工复核；不等于实际不具备该能力。"
+            }
+          ]
+        },
+        {
+          "key": "A",
+          "en": "Adaptability",
+          "name": "适用性",
+          "color": "#eea039",
+          "checks": [
+            {
+              "label": "说明工具或运行环境",
+              "passed": true,
+              "evidence": "description: Creating algorithmic art using p5.js with seeded randomness and interactive parameter exploration. Use this when users request creating art using code, generative art, algorithmic art, flow fields, or particle systems. Create original algorithmic "
+            },
+            {
+              "label": "说明输入或需求",
+              "passed": true,
+              "evidence": "- What is received: Some subtle input or instructions by the user to take into account, but use as a foundation; it should not constrain creative freedom."
+            },
+            {
+              "label": "说明使用场景或范围",
+              "passed": true,
+              "evidence": "description: Creating algorithmic art using p5.js with seeded randomness and interactive parameter exploration. Use this when users request creating art using code, generative art, algorithmic art, flow fields, or particle systems. Create original algorithmic "
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "en": "Convention",
+          "name": "规范性",
+          "color": "#a170dd",
+          "checks": [
+            {
+              "label": "包含 SKILL.md",
+              "passed": true,
+              "evidence": "根据当前版本文件清单检查入口文件。"
+            },
+            {
+              "label": "具有分级标题",
+              "passed": true,
+              "evidence": "检查 Markdown 二级标题。"
+            },
+            {
+              "label": "具有列表或结构化步骤",
+              "passed": true,
+              "evidence": "检查 Markdown 列表或编号步骤。"
+            }
+          ]
+        },
+        {
+          "key": "E",
+          "en": "Effectiveness",
+          "name": "有效性",
+          "color": "#e77b9b",
+          "checks": [
+            {
+              "label": "说明预期成果",
+              "passed": true,
+              "evidence": "description: Creating algorithmic art using p5.js with seeded randomness and interactive parameter exploration. Use this when users request creating art using code, generative art, algorithmic art, flow fields, or particle systems. Create original algorithmic "
+            },
+            {
+              "label": "说明执行方法",
+              "passed": true,
+              "evidence": "- What is received: Some subtle input or instructions by the user to take into account, but use as a foundation; it should not constrain creative freedom."
+            },
+            {
+              "label": "说明结果要求或验收约束",
+              "passed": true,
+              "evidence": "The philosophy must emphasize: Algorithmic expression. Emergent behavior. Computational beauty. Seeded variation."
+            }
+          ]
+        }
+      ],
+      "runtime": "未执行"
+    },
+    {
+      "slug": "github-canvas-design",
+      "version": "1.0.0-source.34040c9c",
+      "missing": [],
+      "dimensions": [
+        {
+          "key": "T",
+          "en": "Trust",
+          "name": "可信任度",
+          "color": "#50b780",
+          "checks": [
+            {
+              "label": "说明限制或操作边界",
+              "passed": true,
+              "evidence": "description: Create beautiful visual art in .png and .pdf documents using design philosophy. You should use this skill when the user asks to create a poster, piece of art, design, or other static piece. Create original visual designs, never copying existing ar"
+            },
+            {
+              "label": "说明保护、原创或安全要求",
+              "passed": true,
+              "evidence": "description: Create beautiful visual art in .png and .pdf documents using design philosophy. You should use this skill when the user asks to create a poster, piece of art, design, or other static piece. Create original visual designs, never copying existing ar"
+            },
+            {
+              "label": "包含作者来源或文档元信息",
+              "passed": true,
+              "evidence": "SKILL.md 包含前置元信息；这不是作者身份认证。"
+            }
+          ]
+        },
+        {
+          "key": "R",
+          "en": "Reliability",
+          "name": "可靠性",
+          "color": "#508fed",
+          "checks": [
+            {
+              "label": "提供 ZIP 文件包",
+              "passed": true,
+              "evidence": "当前版本具有 ZIP 下载文件；不代表依赖已安装。"
+            },
+            {
+              "label": "已识别的相对链接文件齐全",
+              "passed": true,
+              "evidence": "已识别的 Markdown 相对链接未发现缺失；不覆盖动态路径、外部工具与脚本运行依赖。"
+            },
+            {
+              "label": "说明验证或检查步骤",
+              "passed": true,
+              "evidence": "**Text as a contextual element**: Text is always minimal and visual-first, but let context guide whether that means whisper-quiet labels or bold typographic gestures. A punk venue poster might have larger, more aggressive type than a minimalist ceramics studio"
+            }
+          ]
+        },
+        {
+          "key": "A",
+          "en": "Adaptability",
+          "name": "适用性",
+          "color": "#eea039",
+          "checks": [
+            {
+              "label": "说明工具或运行环境",
+              "passed": true,
+              "evidence": "**Text as a contextual element**: Text is always minimal and visual-first, but let context guide whether that means whisper-quiet labels or bold typographic gestures. A punk venue poster might have larger, more aggressive type than a minimalist ceramics studio"
+            },
+            {
+              "label": "说明输入或需求",
+              "passed": true,
+              "evidence": "description: Create beautiful visual art in .png and .pdf documents using design philosophy. You should use this skill when the user asks to create a poster, piece of art, design, or other static piece. Create original visual designs, never copying existing ar"
+            },
+            {
+              "label": "说明使用场景或范围",
+              "passed": true,
+              "evidence": "description: Create beautiful visual art in .png and .pdf documents using design philosophy. You should use this skill when the user asks to create a poster, piece of art, design, or other static piece. Create original visual designs, never copying existing ar"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "en": "Convention",
+          "name": "规范性",
+          "color": "#a170dd",
+          "checks": [
+            {
+              "label": "包含 SKILL.md",
+              "passed": true,
+              "evidence": "根据当前版本文件清单检查入口文件。"
+            },
+            {
+              "label": "具有分级标题",
+              "passed": true,
+              "evidence": "检查 Markdown 二级标题。"
+            },
+            {
+              "label": "具有列表或结构化步骤",
+              "passed": true,
+              "evidence": "检查 Markdown 列表或编号步骤。"
+            }
+          ]
+        },
+        {
+          "key": "E",
+          "en": "Effectiveness",
+          "name": "有效性",
+          "color": "#e77b9b",
+          "checks": [
+            {
+              "label": "说明预期成果",
+              "passed": true,
+              "evidence": "description: Create beautiful visual art in .png and .pdf documents using design philosophy. You should use this skill when the user asks to create a poster, piece of art, design, or other static piece. Create original visual designs, never copying existing ar"
+            },
+            {
+              "label": "说明执行方法",
+              "passed": true,
+              "evidence": "These are instructions for creating design philosophies - aesthetic movements that are then EXPRESSED VISUALLY. Output only .md files, .pdf files, and .png files."
+            },
+            {
+              "label": "说明结果要求或验收约束",
+              "passed": true,
+              "evidence": "The philosophy must emphasize: Visual expression. Spatial communication. Artistic interpretation. Minimal words."
+            }
+          ]
+        }
+      ],
+      "runtime": "未执行"
+    },
+    {
+      "slug": "github-frontend-design",
+      "version": "1.0.0-source.34040c9c",
+      "missing": [],
+      "dimensions": [
+        {
+          "key": "T",
+          "en": "Trust",
+          "name": "可信任度",
+          "color": "#50b780",
+          "checks": [
+            {
+              "label": "说明限制或操作边界",
+              "passed": true,
+              "evidence": "For web designs, the hero is the first thing viewers will see. Open with the most characteristic thing in the subject's world, in the form that is most appropriate: a headline, an image, an animation, a live demo, an interactive moment, or other treatments. Be"
+            },
+            {
+              "label": "说明保护、原创或安全要求",
+              "passed": false,
+              "evidence": "当前 SKILL.md 未识别到对应说明，需要人工复核；不等于实际不具备该能力。"
+            },
+            {
+              "label": "包含作者来源或文档元信息",
+              "passed": true,
+              "evidence": "SKILL.md 包含前置元信息；这不是作者身份认证。"
+            }
+          ]
+        },
+        {
+          "key": "R",
+          "en": "Reliability",
+          "name": "可靠性",
+          "color": "#508fed",
+          "checks": [
+            {
+              "label": "提供 ZIP 文件包",
+              "passed": true,
+              "evidence": "当前版本具有 ZIP 下载文件；不代表依赖已安装。"
+            },
+            {
+              "label": "已识别的相对链接文件齐全",
+              "passed": true,
+              "evidence": "已识别的 Markdown 相对链接未发现缺失；不覆盖动态路径、外部工具与脚本运行依赖。"
+            },
+            {
+              "label": "说明验证或检查步骤",
+              "passed": true,
+              "evidence": "Visual structure is information. Structural devices like outlines, borders, numbering, eyebrows, dividers, labels, etc., encode useful information about the content rather than decorate it. Many generic designs use numbered markers (01 / 02 / 03), but that's o"
+            }
+          ]
+        },
+        {
+          "key": "A",
+          "en": "Adaptability",
+          "name": "适用性",
+          "color": "#eea039",
+          "checks": [
+            {
+              "label": "说明工具或运行环境",
+              "passed": true,
+              "evidence": "When writing the code, be careful of structuring your CSS selector specificities. It's easy to generate CSS classes that cancel each other out (especially with a type-based selector like .section and an element-based selector like .cta). This can happen often "
+            },
+            {
+              "label": "说明输入或需求",
+              "passed": true,
+              "evidence": "Approach this as the design lead at a design studio known for giving every client a distinct visual identity that is not mistaken for anyone else's. This client has already rejected proposals that felt cliché or templated, and is paying for a distinctive point"
+            },
+            {
+              "label": "说明使用场景或范围",
+              "passed": false,
+              "evidence": "当前 SKILL.md 未识别到对应说明，需要人工复核；不等于实际不具备该能力。"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "en": "Convention",
+          "name": "规范性",
+          "color": "#a170dd",
+          "checks": [
+            {
+              "label": "包含 SKILL.md",
+              "passed": true,
+              "evidence": "根据当前版本文件清单检查入口文件。"
+            },
+            {
+              "label": "具有分级标题",
+              "passed": true,
+              "evidence": "检查 Markdown 二级标题。"
+            },
+            {
+              "label": "具有列表或结构化步骤",
+              "passed": true,
+              "evidence": "检查 Markdown 列表或编号步骤。"
+            }
+          ]
+        },
+        {
+          "key": "E",
+          "en": "Effectiveness",
+          "name": "有效性",
+          "color": "#e77b9b",
+          "checks": [
+            {
+              "label": "说明预期成果",
+              "passed": true,
+              "evidence": "Work in two passes. First, brainstorm a short design plan based on the client's design brief: create a compact token system with color, type, layout, and principles."
+            },
+            {
+              "label": "说明执行方法",
+              "passed": true,
+              "evidence": "Visual structure is information. Structural devices like outlines, borders, numbering, eyebrows, dividers, labels, etc., encode useful information about the content rather than decorate it. Many generic designs use numbered markers (01 / 02 / 03), but that's o"
+            },
+            {
+              "label": "说明结果要求或验收约束",
+              "passed": true,
+              "evidence": "Visual structure is information. Structural devices like outlines, borders, numbering, eyebrows, dividers, labels, etc., encode useful information about the content rather than decorate it. Many generic designs use numbered markers (01 / 02 / 03), but that's o"
+            }
+          ]
+        }
+      ],
+      "runtime": "未执行"
+    },
+    {
+      "slug": "figma-fundesign-naming",
+      "version": "1.0.0",
+      "missing": [
+        "references/image-names.tsv",
+        "references/colors.md",
+        "references/color-names.tsv",
+        "references/sync.md"
+      ],
+      "dimensions": [
+        {
+          "key": "T",
+          "en": "Trust",
+          "name": "可信任度",
+          "color": "#50b780",
+          "checks": [
+            {
+              "label": "说明限制或操作边界",
+              "passed": true,
+              "evidence": "根据用户本次请求选择全量或新增图片命名、色值方块命名、查重、跨画板同步或导出表格，不自动执行所有操作。完整流程是读取范围与基准 → 识别用途和状态 → 制定无冲突映射 → 分批改名 → 按授权同步 → 回读验证 → 按需导出表格；只执行本次授权的步骤。"
+            },
+            {
+              "label": "说明保护、原创或安全要求",
+              "passed": true,
+              "evidence": "- **硬性保护：「源组件」和「废案」两个画板/分区及其所有后代均不可修改任何内容。** 包括名称、文字、颜色、样式、位置、尺寸、结构、组件定义、变体、关联、导出设置及增删节点。可只读查询以识别匹配关系；不可直接修改，也不可通过修改共享定义等操作间接影响它们。名称包含「废案」的其他分区也排除，遵守用户其他排除范围。"
+            },
+            {
+              "label": "包含作者来源或文档元信息",
+              "passed": true,
+              "evidence": "SKILL.md 包含前置元信息；这不是作者身份认证。"
+            }
+          ]
+        },
+        {
+          "key": "R",
+          "en": "Reliability",
+          "name": "可靠性",
+          "color": "#508fed",
+          "checks": [
+            {
+              "label": "提供 ZIP 文件包",
+              "passed": true,
+              "evidence": "当前版本具有 ZIP 下载文件；不代表依赖已安装。"
+            },
+            {
+              "label": "已识别的相对链接文件齐全",
+              "passed": false,
+              "evidence": "references/image-names.tsv、references/colors.md、references/color-names.tsv、references/sync.md"
+            },
+            {
+              "label": "说明验证或检查步骤",
+              "passed": true,
+              "evidence": "根据用户本次请求选择全量或新增图片命名、色值方块命名、查重、跨画板同步或导出表格，不自动执行所有操作。完整流程是读取范围与基准 → 识别用途和状态 → 制定无冲突映射 → 分批改名 → 按授权同步 → 回读验证 → 按需导出表格；只执行本次授权的步骤。"
+            }
+          ]
+        },
+        {
+          "key": "A",
+          "en": "Adaptability",
+          "name": "适用性",
+          "color": "#eea039",
+          "checks": [
+            {
+              "label": "说明工具或运行环境",
+              "passed": true,
+              "evidence": "## 范围与工具"
+            },
+            {
+              "label": "说明输入或需求",
+              "passed": true,
+              "evidence": "根据用户本次请求选择全量或新增图片命名、色值方块命名、查重、跨画板同步或导出表格，不自动执行所有操作。完整流程是读取范围与基准 → 识别用途和状态 → 制定无冲突映射 → 分批改名 → 按授权同步 → 回读验证 → 按需导出表格；只执行本次授权的步骤。"
+            },
+            {
+              "label": "说明使用场景或范围",
+              "passed": true,
+              "evidence": "根据用户本次请求选择全量或新增图片命名、色值方块命名、查重、跨画板同步或导出表格，不自动执行所有操作。完整流程是读取范围与基准 → 识别用途和状态 → 制定无冲突映射 → 分批改名 → 按授权同步 → 回读验证 → 按需导出表格；只执行本次授权的步骤。"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "en": "Convention",
+          "name": "规范性",
+          "color": "#a170dd",
+          "checks": [
+            {
+              "label": "包含 SKILL.md",
+              "passed": true,
+              "evidence": "根据当前版本文件清单检查入口文件。"
+            },
+            {
+              "label": "具有分级标题",
+              "passed": true,
+              "evidence": "检查 Markdown 二级标题。"
+            },
+            {
+              "label": "具有列表或结构化步骤",
+              "passed": true,
+              "evidence": "检查 Markdown 列表或编号步骤。"
+            }
+          ]
+        },
+        {
+          "key": "E",
+          "en": "Effectiveness",
+          "name": "有效性",
+          "color": "#e77b9b",
+          "checks": [
+            {
+              "label": "说明预期成果",
+              "passed": true,
+              "evidence": "description: 按 fundesign 规范处理 Figma 神画组件的图片素材与色值方块命名、增量命名、查重、同组件跨画板同步及四列命名表导出。用于神画组件、fundesign 图片和颜色资源命名流程。"
+            },
+            {
+              "label": "说明执行方法",
+              "passed": true,
+              "evidence": "description: 按 fundesign 规范处理 Figma 神画组件的图片素材与色值方块命名、增量命名、查重、同组件跨画板同步及四列命名表导出。用于神画组件、fundesign 图片和颜色资源命名流程。"
+            },
+            {
+              "label": "说明结果要求或验收约束",
+              "passed": true,
+              "evidence": "- 使用可用的 Figma MCP；调用 use_figma 前加载 figma:figma-use 技能，遵循其 API、批量大小和错误恢复要求，并传入 skillNames: \"figma-use\"。不复制 Plugin API 文档。"
+            }
+          ]
+        }
+      ],
+      "runtime": "未执行"
+    },
+    {
+      "slug": "board-splitter",
+      "version": "1.0.0",
+      "missing": [],
+      "dimensions": [
+        {
+          "key": "T",
+          "en": "Trust",
+          "name": "可信任度",
+          "color": "#50b780",
+          "checks": [
+            {
+              "label": "说明限制或操作边界",
+              "passed": true,
+              "evidence": "6. 输出到新版本目录，保留旧版本。调用 `python scripts/package_assets.py <asset-root> --source <original-image>`；依赖Pillow。不得将生成工具默认存储位置作为唯一交付位置。"
+            },
+            {
+              "label": "说明保护、原创或安全要求",
+              "passed": true,
+              "evidence": "- 边缘整体、简洁：少量大块石面、连续苔藓或大块植物造型；避免大量细碎石子、叶片和嘈杂纹理。保留必要质感，不把所有主题变成同一种石框。"
+            },
+            {
+              "label": "包含作者来源或文档元信息",
+              "passed": true,
+              "evidence": "SKILL.md 包含前置元信息；这不是作者身份认证。"
+            }
+          ]
+        },
+        {
+          "key": "R",
+          "en": "Reliability",
+          "name": "可靠性",
+          "color": "#508fed",
+          "checks": [
+            {
+              "label": "提供 ZIP 文件包",
+              "passed": true,
+              "evidence": "当前版本具有 ZIP 下载文件；不代表依赖已安装。"
+            },
+            {
+              "label": "已识别的相对链接文件齐全",
+              "passed": true,
+              "evidence": "已识别的 Markdown 相对链接未发现缺失；不覆盖动态路径、外部工具与脚本运行依赖。"
+            },
+            {
+              "label": "说明验证或检查步骤",
+              "passed": true,
+              "evidence": "description: 按既定预设拆分飞行棋/Ludo棋盘为透明家园、格子、中心块、凹陷圆圈、底板和补全背景，并校验打包。用于“拆分棋盘”“用预设拆分”及这些素材的后续修改。"
+            }
+          ]
+        },
+        {
+          "key": "A",
+          "en": "Adaptability",
+          "name": "适用性",
+          "color": "#eea039",
+          "checks": [
+            {
+              "label": "说明工具或运行环境",
+              "passed": true,
+              "evidence": "| 场景背景 | 1张，不透明PNG | 原图宽高，移除整个棋盘并补全遮挡环境 |"
+            },
+            {
+              "label": "说明输入或需求",
+              "passed": true,
+              "evidence": "从用户当前指定的棋盘提取和补全可复用素材。最新明确要求优先于本预设；后续局部修改只更新相关资产，同时重新打包。不要用同主题旧素材替代当前图的内容，除非用户明确接受复用。"
+            },
+            {
+              "label": "说明使用场景或范围",
+              "passed": true,
+              "evidence": "| 棋盘底板 | 1张，720×720不透明PNG | 棋盘背板材质，中心安静，和整页场景背景分开 |"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "en": "Convention",
+          "name": "规范性",
+          "color": "#a170dd",
+          "checks": [
+            {
+              "label": "包含 SKILL.md",
+              "passed": true,
+              "evidence": "根据当前版本文件清单检查入口文件。"
+            },
+            {
+              "label": "具有分级标题",
+              "passed": true,
+              "evidence": "检查 Markdown 二级标题。"
+            },
+            {
+              "label": "具有列表或结构化步骤",
+              "passed": true,
+              "evidence": "检查 Markdown 列表或编号步骤。"
+            }
+          ]
+        },
+        {
+          "key": "E",
+          "en": "Effectiveness",
+          "name": "有效性",
+          "color": "#e77b9b",
+          "checks": [
+            {
+              "label": "说明预期成果",
+              "passed": true,
+              "evidence": "## 默认交付"
+            },
+            {
+              "label": "说明执行方法",
+              "passed": true,
+              "evidence": "## 制作和校验"
+            },
+            {
+              "label": "说明结果要求或验收约束",
+              "passed": true,
+              "evidence": "description: 按既定预设拆分飞行棋/Ludo棋盘为透明家园、格子、中心块、凹陷圆圈、底板和补全背景，并校验打包。用于“拆分棋盘”“用预设拆分”及这些素材的后续修改。"
+            }
+          ]
+        }
+      ],
+      "runtime": "未执行"
+    }
+  ],
+  "status": "旧版关键词计分已撤回；记录仅作静态扫描线索，不代表质量评测"
+}
