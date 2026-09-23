@@ -1,6 +1,7 @@
 import {env} from 'cloudflare:workers';
 
-export type SkillVersion={version:string;publishedAt:string;markdownKey:string;zipKey?:string};
+export type SkillFile={path:string;size:number;archivePath?:string;previewable:boolean};
+export type SkillVersion={version:string;publishedAt:string;markdownKey:string;zipKey?:string;files?:SkillFile[]};
 export type PublishedSkill={slug:string;title:string;summary:string;category:string;tags:string[];author:string;updatedAt:string;versions:SkillVersion[]};
 
 type SkillEnv={SKILLS_BUCKET?:R2Bucket;SKILL_UPLOAD_KEY?:string};
@@ -40,5 +41,8 @@ export async function isOwnerRequest(request:Request){
   if(!expected||!actual||actual.length>256)return false;
   const encoder=new TextEncoder();
   const [a,b]=await Promise.all([crypto.subtle.digest('SHA-256',encoder.encode(actual)),crypto.subtle.digest('SHA-256',encoder.encode(expected))]);
-  return new Uint8Array(a).every((byte,index)=>byte===new Uint8Array(b)[index]);
+  const actualHash=new Uint8Array(a),expectedHash=new Uint8Array(b);
+  let difference=0;
+  for(let index=0;index<actualHash.length;index++)difference|=actualHash[index]^expectedHash[index];
+  return difference===0;
 }
