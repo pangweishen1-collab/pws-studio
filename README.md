@@ -30,3 +30,17 @@ GitHub 仓库保存网站源码和展示资源。GitHub Pages 仅支持静态网
 线上运行需要 Workers 兼容环境及 `SKILLS_BUCKET` R2 绑定。`.openai/hosting.json` 记录现有 Sites 项目配置。
 
 本地 R2 数据、上传的 Skill 文件包、密钥与运行缓存不会随源码提交；迁移环境需单独迁移存储数据。
+
+## 当前线上网站
+
+https://pws-studio.pangweishen1.workers.dev
+
+部署到现有 Cloudflare 账户：
+
+```sh
+pnpm build
+node scripts/deploy-cloudflare.mjs
+```
+
+Worker 名称为 `pws-studio`，R2 存储桶为 `pws-studio-skills`，绑定为 `SKILLS_BUCKET`。
+上传密钥通过 Cloudflare Worker Secret 配置，不写入源码。
