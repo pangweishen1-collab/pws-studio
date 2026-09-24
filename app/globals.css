@@ -255,7 +255,7 @@ html{scroll-behavior:auto;scrollbar-gutter:stable}
 .entries>.entry{animation:resource-enter .34s cubic-bezier(.22,.61,.36,1) both}
 .entry{transition:background-color .2s,border-color .2s,box-shadow .2s}
 .entry-icon{transition:transform .22s ease}
-.entry-main:hover .entry-icon{transform:translateY(-2px)}
+.entry-main:hover .entry-icon{transform:none}
 .sort-options button,.collection-button,.skill-favorite-stat,.bookmark-button,.icon-button,.skill-upload-shortcut,.skill-tabs button,.skill-download,.skill-aside-card button{transition:background-color .18s,color .18s,border-color .18s,box-shadow .18s,transform .18s}
 .sort-options button:active,.collection-button:active,.skill-favorite-stat:active,.bookmark-button:active,.icon-button:active,.skill-upload-shortcut:active,.skill-download:active,.skill-aside-card button:active{transform:scale(.96)}
 .main-nav>a:after{transition:opacity .2s,transform .2s}
@@ -269,7 +269,7 @@ html{scroll-behavior:auto;scrollbar-gutter:stable}
 /* Full-width portrait cover; let the card follow the image's natural height. */
 .grid-view .has-example .tool-example{height:auto;display:block;background:#102c2c}
 .grid-view .has-example .tool-example>img{width:100%;height:auto;max-width:100%;border-radius:0;box-shadow:none;object-fit:contain}
-.grid-view .has-example .entry-main:hover .tool-example>img{transform:none}
+
 
 /* Centered portrait cover with breathing room. */
 .grid-view .has-example .tool-example{display:flex;justify-content:center;align-items:center;padding:22px 18px;background:radial-gradient(ellipse at center,#235650,#102c2c)}
@@ -290,3 +290,11 @@ html{scroll-behavior:auto;scrollbar-gutter:stable}
 .studio-logo{display:inline-flex;align-items:center;width:74px;flex-shrink:0;vertical-align:middle}.studio-logo img{display:block;width:100%;height:auto;object-fit:contain}.footer-brand .studio-logo{width:90px}.skill-brand .studio-logo{width:74px}@media(max-width:680px){.studio-logo,.skill-brand .studio-logo{width:64px}.header-inner{gap:16px}}
 
 .auto-report-summary{display:flex;justify-content:space-between;gap:24px;align-items:center;border:1px solid #e8e6f2;border-radius:18px;padding:26px;margin-top:24px;background:#fff}.auto-report-summary h3{font-size:20px;margin:0 0 10px}.auto-report-summary p,.auto-report-summary small,.auto-report-scope{color:#7d8492;font-size:13px;line-height:1.8}.auto-report-counts{display:flex;gap:24px}.auto-report-counts>div{display:grid;gap:6px;text-align:center;white-space:nowrap}.auto-report-counts b{font-size:28px}.auto-report-counts span{font-size:12px}.auto-check-pass{color:#25835b}.auto-check-fail{color:#c03b4d}.auto-check-review{color:#ab7518}.auto-check-manual{color:#808899}.auto-check-item{padding:18px 0;border-bottom:1px solid #f0f0f5}.auto-check-item:last-child{border-bottom:0}.auto-check-item>div{display:flex;align-items:center;justify-content:space-between;gap:16px}.auto-check-item strong{font-size:14px}.auto-check-badge{font-size:12px;white-space:nowrap}.auto-check-item ul{padding-left:18px;font-size:13px;line-height:1.8;color:#747d8d;overflow-wrap:anywhere}.auto-report-scope code{overflow-wrap:anywhere}@media(max-width:700px){.auto-report-summary{align-items:flex-start;flex-direction:column}.auto-report-counts{width:100%;justify-content:space-between;gap:12px}}
+
+/* Cover-only hover motion: keep the tool logo anchored. */
+.grid-view .has-example .tool-example::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 42%,#70d9c44d,transparent 68%);opacity:0;transition:opacity .35s ease;pointer-events:none}
+.grid-view .has-example .tool-example>img{position:relative;transition:transform .38s cubic-bezier(.22,.61,.36,1)}
+@media(hover:hover) and (pointer:fine){.grid-view .has-example:hover .tool-example>img{transform:translateY(-5px) scale(1.025)}.grid-view .has-example:hover .tool-example::before{opacity:1}}
+.grid-view .has-example:focus-within .tool-example>img{transform:translateY(-5px) scale(1.025)}
+.grid-view .has-example:focus-within .tool-example::before{opacity:1}
+@media(prefers-reduced-motion:reduce){.grid-view .has-example .tool-example>img,.grid-view .has-example .tool-example::before{transition:none}.grid-view .has-example:hover .tool-example>img,.grid-view .has-example:focus-within .tool-example>img{transform:none}}
