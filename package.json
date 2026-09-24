@@ -11,7 +11,11 @@
     "start": "wrangler dev --config dist/server/wrangler.json",
     "lint": "oxlint",
     "format": "oxfmt",
-    "check:images": "node scripts/check-images.mjs"
+    "check:images": "node scripts/check-images.mjs",
+    "test": "node --experimental-strip-types --test tests/*.test.mjs",
+    "check": "pnpm check:images && tsc --noEmit && pnpm test",
+    "check:live": "node scripts/check-site.mjs",
+    "deploy": "pnpm check && pnpm build && node scripts/deploy-cloudflare.mjs && pnpm check:live"
   },
   "dependencies": {
     "@base-ui/react": "1.7.0",

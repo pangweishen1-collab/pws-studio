@@ -252,7 +252,7 @@ html{scroll-behavior:auto;scrollbar-gutter:stable}
 .list-view .skill-entry .skill-stat-bottom{justify-content:flex-end}
 .list-view .skill-entry .skill-stat-bottom .github-source{margin-right:0}
 @keyframes resource-enter{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
-.entries>.entry{animation:resource-enter .34s cubic-bezier(.22,.61,.36,1) both}
+.entries>.entry{animation:resource-enter .18s cubic-bezier(.22,.61,.36,1) both}
 .entry{transition:background-color .2s,border-color .2s,box-shadow .2s}
 .entry-icon{transition:transform .22s ease}
 .entry-main:hover .entry-icon{transform:none}

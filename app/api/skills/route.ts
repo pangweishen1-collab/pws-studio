@@ -1,9 +1,9 @@
 import {getAutoReport} from '@/lib/skill-auto-report';
-import {isOwnerRequest,listSkills,readSkill,skillBucket,type PublishedSkill,type SkillFile} from '@/lib/skill-store';
+import {isOwnerRequest,listSkillSummaries,invalidateSkillCatalog,readSkill,skillBucket,type PublishedSkill,type SkillFile} from '@/lib/skill-store';
 import {openSkillArchive} from '@/lib/skill-archive';
 
 export async function GET(){
-  try{return Response.json({skills:(await listSkills()).map(skill=>({...skill,versions:skill.versions.map(({files,...version})=>version)}))},{headers:{'Cache-Control':'no-store'}});}
+  try{return Response.json({skills:await listSkillSummaries()},{headers:{'Cache-Control':'no-store'}});}
   catch{return Response.json({error:'Skill 列表暂时不可用'}, {status:503});}
 }
 
@@ -58,6 +58,7 @@ export async function POST(request:Request){
   const source=sourceText?JSON.parse(sourceText) as PublishedSkill['source']:existing?.source;
   const skill:PublishedSkill={source,slug,title,summary,category,tags,author,updatedAt:publishedAt,versions:[{version,publishedAt,markdownKey,zipKey,files},...(existing?.versions||[])]};
   await bucket.put(`skills/${slug}/current.json`,JSON.stringify(skill),{httpMetadata:{contentType:'application/json'}});
+  invalidateSkillCatalog();
   let evaluationStatus='complete';
   try{await getAutoReport(slug,skill.versions[0])}catch{evaluationStatus='pending'}
   return Response.json({skill,evaluationStatus},{status:201});

@@ -1,5 +1,6 @@
 import {env} from 'cloudflare:workers';
 import {cache} from 'react';
+import {createAsyncCache} from './async-cache';
 
 export type SkillFile={path:string;size:number;archivePath?:string;previewable:boolean};
 export type SkillVersion={version:string;publishedAt:string;markdownKey:string;zipKey?:string;files?:SkillFile[]};
@@ -20,7 +21,11 @@ export const readSkill=cache(async (slug:string)=>{
   return JSON.parse(await object.text()) as PublishedSkill;
 });
 
-export async function listSkills(){
+const catalogCache=createAsyncCache<PublishedSkill[]>(30_000);
+export const invalidateSkillCatalog=()=>catalogCache.invalidate();
+export const listSkills=()=>catalogCache.get(loadSkills);
+export const listSkillSummaries=async ()=>(await listSkills()).map(skill=>({...skill,versions:skill.versions.map(({files,...version})=>version)}));
+async function loadSkills(){
   const bucket=skillBucket();
   let cursor:string|undefined;
   const result:PublishedSkill[]=[];

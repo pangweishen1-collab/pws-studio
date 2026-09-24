@@ -56,3 +56,10 @@ node --experimental-strip-types --test tests/skill-auto-check.test.mjs
 ```
 
 修改检测规则时提升 `ENGINE_VERSION`，使已有 Skill 生成新规则版本的报告。
+
+## 加载与发布保障
+
+首页直接包含 Skill 摘要；不再等待客户端首次请求才填充列表。列表在 Worker 内缓存 30 秒，并合并并发加载。当前实例的写入会清理缓存，其他实例最多延迟 30 秒更新计数。
+
+`pnpm check` 检查图片格式、TypeScript 与测试；GitHub Actions 在 main 推送或 PR 时自动执行检查与构建。
+`pnpm deploy` 按顺序执行检查、构建、部署及线上只读验收；`pnpm check:live` 可单独复查首页、详情、数据及图片。
